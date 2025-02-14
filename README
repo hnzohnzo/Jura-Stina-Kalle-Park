@@ -1,1 +1,32 @@
+Mapp Hierarki fungerar som följande.
 
+/test related
+     /tests:  (testfall och testsviter)
+        /tests/kim:  (testfall relaterade till Kim och familjen)
+        /tests/stina-palle:  (testfall relaterade till Stina-Palle.
+        /tests/common:  (Gemensamma testfall, t.ex. registrering, inlogging)
+
+     /resources:  Resursfiler för Robot framework (t.ex. nyckelord, variabler)
+        /resources/common.robot  (Gemensamma nyckelord och variabler)
+        /resources/kim.robot  (Nyckelord specifika för Kims testfall
+        /resources/stina-palle.robot  (Nyckelord specifika för Stina-Palles testfall)
+
+     /results:  (Sparade testresultat och loggar)
+        /results/logs:   (Loggfiler från testkörningar
+        /results/reports:  (Testrapporter)
+
+/config
+     /config/settings.ini  (Inställningar för testmiljön)
+     /config/browser_config.ini  (Inställningar för webbläsare)
+
+/docs:  (All dokumentation)
+     /docs/FallBeskrivningar  (Fallbeskrivningar för Kim och Stina-Palle)
+     /docs/ProjektBeskrivning  (Projekt beskrivning och information kring inlämning)
+     /docs/Sammanfattning  (Sammanfattning av hela projektet i txt format)
+
+/website
+     /website/assets/  (Bilder och andra mediefiler)
+     /website/styles.css  (CSS-fil för styling)
+     /website/app.js  (JavaScript-fil för funktionalitet)
+
+      
