@@ -4,12 +4,11 @@ Library    SeleniumLibrary
 Resource    ../../resources/common.robot
 Resource    ../../resources/stina-palle.robot
 Variables    ../../resources/variables.py
-Test Setup
-Test Teardown
+Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_jura}
+Test Teardown    Close Browser
 
 *** Test Cases ***
 Buy ticket successful
-    Open Browser to webpage
     Go to Register tab
     Type "Stina-Palle" in field Username
     Type "Paleontologen" in field Password
