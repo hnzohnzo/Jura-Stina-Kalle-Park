@@ -11,7 +11,7 @@ standard_timeout = "10s"
  
 # Jura specific
 browser_jura = "chrome"
-url_jura = f"file:///{current_directory}/webpages/jurap.html"
+url_jura = f"file:///{current_directory}/../website/jurap.html"
 title_jura = "Jura-Stina-Kalle Park"
 
 username_input_id_demo = "id=username"
