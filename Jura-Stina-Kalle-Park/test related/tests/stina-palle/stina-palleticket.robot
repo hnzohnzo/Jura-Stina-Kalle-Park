@@ -1,11 +1,33 @@
 *** Settings ***
 Documentation    User 2 buying their ticket
 Library    SeleniumLibrary
-Resource    common.robot
-Resource    stina-palle.robot
-Variables    variables.py
+Resource    ../../resources/common.robot
+Resource    ../../resources/stina-palle.robot
+Variables    ../../resources/variables.py
 Test Setup
 Test Teardown
 
 *** Test Cases ***
+Buy ticket successful
+    Open Browser to webpage
+    Go to Register tab
+    Type "Stina-Palle" in field Username
+    Type "Paleontologen" in field Password
+    Click button "Register"
+    -> Login page
+    Type in Registered Username ("Stina-Palle") in field Username
+    Type in Registered Password ("Paleontologen") in field Password
+    Click button "Login"
+    Go to Buy Tickets
+    Set Ticket Type to Adult
+    Set Ticket Category to Regular Ticket
+    Set Quantity to 1
+    Click button "Add to Cart"
+    Verifiera meddelande "Item added to cart!"
+    Click button OK
+    Go to Cart
+    If cart contains 1 Regular Adult ticket
+    and total = $50
+    Click button "Proceed to Checkout"
+
 
