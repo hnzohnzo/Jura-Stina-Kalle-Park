@@ -1,0 +1,7 @@
+valid_user:
+  username: "KimUsername"
+  password: "KimPassword123"
+
+invalid_user:
+  username: "KimAndFamily"
+  password: "WrongPassword"

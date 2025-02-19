@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-19T11:48:57.032895" rpa="false" schemaversion="5">
+<suite id="s1" name="2.2 Testa INLOGG" source="c:\Users\Hanzoni\Desktop\JURASTINA - UPPGIFT\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\test related\tests\kim\2.2 Testa INLOGG.robot">
+<test id="s1-t1" name="Verify Login Form Elements Exist" line="14">
+<kw name="Open Browser To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:48:57.322607" level="INFO">Opening browser 'Chrome' to base url 'file:///C:/Users/Hanzoni/Desktop/Jura-Stina-Kalle-Park/Jura-Stina-Kalle-Park/website/jurap.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-19T11:48:57.322280" elapsed="1.532590"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-19T11:48:58.855318" elapsed="0.019926"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login-nav</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T11:48:58.875557" elapsed="0.075476"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:48:58.951675" level="INFO">Clicking element 'id=login-nav'.</msg>
+<arg>id=login-nav</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T11:48:58.951335" elapsed="0.058273"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login-form</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T11:48:59.009918" elapsed="0.017072"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:48:57.321368" elapsed="1.705870"/>
+</kw>
+<kw name="Verify Login Form Elements Are Visible">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:48:59.043062" level="INFO">Element 'id=login-username' is displayed.</msg>
+<arg>id=login-username</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T11:48:59.028244" elapsed="0.015286"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:48:59.055831" level="INFO">Element 'id=login-password' is displayed.</msg>
+<arg>id=login-password</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T11:48:59.043918" elapsed="0.012153"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:48:59.069682" level="INFO">Element 'css=#login-form button[type='submit']' is displayed.</msg>
+<arg>css=#login-form button[type='submit']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T11:48:59.056275" elapsed="0.013670"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-19T11:48:59.081737" level="INFO">Element 'id=login-message' is displayed.</msg>
+<arg>id=login-message</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T11:48:59.070156" elapsed="0.011824"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:48:59.027800" elapsed="0.054334"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-19T11:48:59.082602" elapsed="2.089050"/>
+</kw>
+<status status="PASS" start="2025-02-19T11:48:57.320554" elapsed="3.851843"/>
+</test>
+<status status="PASS" start="2025-02-19T11:48:57.038581" elapsed="4.135218"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="2.2 Testa INLOGG" id="s1" pass="1" fail="0" skip="0">2.2 Testa INLOGG</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
