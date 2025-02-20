@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on darwin)" generated="2025-02-20T21:12:12.778306" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Registration Login" source="/Users/mac/Jura-Stina-Kalle-Park/Jura-Stina-Kalle-Park/test related/tests/stina-palle/test_registration_login.robot">
+<test id="s1-t1" name="1.4 - Successful Login" line="37">
+<kw name="Open Browser To Main Page" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-20T21:12:13.048205" level="INFO">Opening browser 'chrome' to base url 'file:///Users/mac/Desktop/jurastina-alfa/jurap.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-20T21:12:13.047683" elapsed="3.002740"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-20T21:12:16.051450" elapsed="0.391719"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-02-20T21:12:16.444711" elapsed="0.007875"/>
+</kw>
+<status status="PASS" start="2025-02-20T21:12:13.046038" elapsed="3.410399"/>
+</kw>
+<kw name="Given Navigate To Login Page" owner="stina-palle">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-20T21:12:16.464311" level="INFO">Clicking element 'id=login-nav'.</msg>
+<arg>id=login-nav</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-20T21:12:16.461928" elapsed="0.140841"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login-section</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-20T21:12:16.603425" elapsed="0.124077"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-20T21:12:18.728540" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-20T21:12:16.727923" elapsed="2.001046"/>
+</kw>
+<status status="PASS" start="2025-02-20T21:12:16.459980" elapsed="2.269308"/>
+</kw>
+<kw name="When Fill Login Form" owner="stina-palle">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login-username</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-20T21:12:18.731834" elapsed="0.029277"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-20T21:12:18.762129" level="INFO">Typing text 'StinaPalle5' into text field 'id=login-username'.</msg>
+<arg>id=login-username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-20T21:12:18.761576" elapsed="0.281832"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-20T21:12:19.045009" level="INFO">Typing text 'Paleontologen' into text field 'id=login-password'.</msg>
+<arg>id=login-password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-20T21:12:19.044115" elapsed="0.167227"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-20T21:12:19.214550" level="INFO">Clicking button 'xpath=//form[@id='login-form']//button[@type='submit']'.</msg>
+<arg>xpath=//form[@id='login-form']//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-20T21:12:19.213845" elapsed="0.138366"/>
+</kw>
+<arg>${STINA_USERNAME}</arg>
+<arg>${STINA_PASSWORD}</arg>
+<status status="PASS" start="2025-02-20T21:12:18.730444" elapsed="0.622255"/>
+</kw>
+<kw name="Then Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-20T21:12:19.770216" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-53.png"&gt;&lt;img src="selenium-screenshot-53.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-20T21:12:19.771277" level="FAIL">The element 'id=logout-nav' should be visible, but it is not.</msg>
+<arg>id=logout-nav</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-02-20T21:12:19.353869" elapsed="0.426030">The element 'id=logout-nav' should be visible, but it is not.</status>
+</kw>
+<kw name="And Element Should Not Be Visible" owner="SeleniumLibrary">
+<arg>id=login-nav</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="NOT RUN" start="2025-02-20T21:12:19.781162" elapsed="0.000857"/>
+</kw>
+<doc>Stina-Palle successfully logs into the website</doc>
+<tag>login</tag>
+<tag>positive</tag>
+<tag>Sumeyye</tag>
+<status status="FAIL" start="2025-02-20T21:12:13.044414" elapsed="6.738947">The element 'id=logout-nav' should be visible, but it is not.</status>
+</test>
+<doc>Test cases for Stina-Palle registration and login functionality</doc>
+<status status="FAIL" start="2025-02-20T21:12:12.784555" elapsed="7.001531"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">login</stat>
+<stat pass="0" fail="1" skip="0">positive</stat>
+<stat pass="0" fail="1" skip="0">Sumeyye</stat>
+</tag>
+<suite>
+<stat name="Test Registration Login" id="s1" pass="0" fail="1" skip="0">Test Registration Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
