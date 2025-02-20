@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}             Chrome
-${URL}                 file:///C:/Users/Hanzoni/Desktop/JURASTINA%20-%20UPPGIFT/Jura-Stina-Kalle-Park/website/jurap.html  # Change this to your actual file path
+${URL}                file:///C:/Users/Hanzoni/Desktop/Jura-Stina-Kalle/website/jurap.html  # Change this to your actual file path
 ${TICKETS_NAV}        xpath=//li[@id='tickets-nav']/a
 ${TICKET_CATEGORY}    id=ticket-category
 ${TICKET_QUANTITY}    id=ticket-quantity

@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-19T15:22:20.249778" rpa="false" schemaversion="5">
-<suite id="s1" name="2.2 Kim köper biljetter utan att vara inloggad" source="c:\Users\Hanzoni\Desktop\JURASTINA - UPPGIFT\Jura-Stina-Kalle-Park\test related\tests\kim\2.2 Kim köper biljetter utan att vara inloggad.robot">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-20T10:55:17.983772" rpa="false" schemaversion="5">
+<suite id="s1" name="2.2 Kim köper biljetter utan att vara inloggad" source="c:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests\kim\2.2 Kim köper biljetter utan att vara inloggad.robot">
 <test id="s1-t1" name="User Cannot Buy Tickets Without Login" line="15">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-19T15:22:20.501670" level="INFO">Opening browser 'Chrome' to base url 'file:///C:/Users/Hanzoni/Desktop/JURASTINA%20-%20UPPGIFT/Jura-Stina-Kalle-Park/website/jurap.html'.</msg>
+<msg time="2025-02-20T10:55:18.313620" level="INFO">Opening browser 'Chrome' to base url 'file:///C:/Users/Hanzoni/Desktop/Jura-Stina-Kalle/website/jurap.html'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-19T15:22:20.501294" elapsed="1.328571"/>
+<status status="PASS" start="2025-02-20T10:55:18.313056" elapsed="1.614668"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-19T15:22:21.830520" elapsed="0.023395"/>
+<status status="PASS" start="2025-02-20T10:55:19.928715" elapsed="0.026801"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.2</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-19T15:22:21.854633" elapsed="0.000515"/>
+<status status="PASS" start="2025-02-20T10:55:19.956852" elapsed="0.000617"/>
 </kw>
 <kw name="Navigate To Tickets">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-19T15:22:21.857547" level="INFO">Clicking element 'xpath=//li[@id='tickets-nav']/a'.</msg>
+<msg time="2025-02-20T10:55:19.960320" level="INFO">Clicking element 'xpath=//li[@id='tickets-nav']/a'.</msg>
 <arg>${TICKETS_NAV}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-19T15:22:21.856998" elapsed="0.469889"/>
+<status status="PASS" start="2025-02-20T10:55:19.959360" elapsed="0.478706"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${TICKET_CATEGORY}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-02-19T15:22:22.327233" elapsed="0.210874"/>
+<status status="PASS" start="2025-02-20T10:55:20.438395" elapsed="0.211772"/>
 </kw>
-<status status="PASS" start="2025-02-19T15:22:21.856377" elapsed="0.681987"/>
+<status status="PASS" start="2025-02-20T10:55:19.958360" elapsed="0.692108"/>
 </kw>
 <kw name="Attempt To Add Tickets Without Login">
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-19T15:22:22.539450" level="INFO">Selecting options from selection list 'id=ticket-category' by value VIP.</msg>
+<msg time="2025-02-20T10:55:20.652605" level="INFO">Selecting options from selection list 'id=ticket-category' by value VIP.</msg>
 <arg>${TICKET_CATEGORY}</arg>
 <arg>VIP</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-19T15:22:22.539182" elapsed="1.654629"/>
+<status status="PASS" start="2025-02-20T10:55:20.652291" elapsed="1.670849"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-19T15:22:24.194460" level="INFO">Typing text '2' into text field 'id=ticket-quantity'.</msg>
+<msg time="2025-02-20T10:55:22.323849" level="INFO">Typing text '2' into text field 'id=ticket-quantity'.</msg>
 <arg>${TICKET_QUANTITY}</arg>
 <arg>2</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-19T15:22:24.194121" elapsed="0.670885"/>
+<status status="PASS" start="2025-02-20T10:55:22.323475" elapsed="0.672302"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-19T15:22:24.865617" level="INFO">Clicking button 'xpath=//form[@id='ticket-form']//button[@type='submit']'.</msg>
+<msg time="2025-02-20T10:55:22.996667" level="INFO">Clicking button 'xpath=//form[@id='ticket-form']//button[@type='submit']'.</msg>
 <arg>${ADD_TO_CART}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-19T15:22:24.865309" elapsed="1.068723"/>
+<status status="PASS" start="2025-02-20T10:55:22.996275" elapsed="1.065402"/>
 </kw>
 <kw name="Verify Alert Message">
 <kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-19T15:22:25.934968" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg time="2025-02-19T15:22:26.540696" level="INFO">${alert_text} = You must be logged in to purchase tickets.</msg>
+<msg time="2025-02-20T10:55:24.062710" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-02-20T10:55:24.670335" level="INFO">${alert_text} = You must be logged in to purchase tickets.</msg>
 <var>${alert_text}</var>
 <arg>ACCEPT</arg>
 <doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-19T15:22:25.934754" elapsed="0.606154"/>
+<status status="PASS" start="2025-02-20T10:55:24.062485" elapsed="0.608076"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${alert_text}</arg>
 <arg>${EXPECTED_ALERT_TEXT}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-02-19T15:22:26.541133" elapsed="0.000322"/>
+<status status="PASS" start="2025-02-20T10:55:24.670797" elapsed="0.000332"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${LOGIN_SECTION}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-02-19T15:22:26.541608" elapsed="0.208213"/>
+<status status="PASS" start="2025-02-20T10:55:24.671298" elapsed="0.209504"/>
 </kw>
-<status status="PASS" start="2025-02-19T15:22:25.934391" elapsed="0.815675"/>
+<status status="PASS" start="2025-02-20T10:55:24.062074" elapsed="0.819005"/>
 </kw>
-<status status="PASS" start="2025-02-19T15:22:22.538830" elapsed="4.211345"/>
+<status status="PASS" start="2025-02-20T10:55:20.651648" elapsed="4.229626"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-19T15:22:26.750585" elapsed="2.284312"/>
+<status status="PASS" start="2025-02-20T10:55:24.881949" elapsed="2.312736"/>
 </kw>
-<status status="PASS" start="2025-02-19T15:22:20.500281" elapsed="8.535154"/>
+<status status="PASS" start="2025-02-20T10:55:18.311946" elapsed="8.883311"/>
 </test>
-<status status="PASS" start="2025-02-19T15:22:20.253773" elapsed="8.782637"/>
+<status status="PASS" start="2025-02-20T10:55:17.988938" elapsed="9.207564"/>
 </suite>
 <statistics>
 <total>
