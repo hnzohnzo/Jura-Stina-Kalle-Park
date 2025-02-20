@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Library    String
 
 *** Variables ***
-${URL}       file:///C:/Users/Hanzoni/Desktop/Jura-Stina-Kalle-Park/Jura-Stina-Kalle-Park/website/jurap.html
+${URL}       file:///C:/Users/Hanzoni/Desktop/JURASTINA%20-%20UPPGIFT/Jura-Stina-Kalle-Park/website/jurap.html
 ${BROWSER}   Chrome
 ${USERNAME}  KimUsername
 ${PASSWORD}  KimPassword123

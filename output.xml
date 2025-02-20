@@ -1,73 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-19T11:48:57.032895" rpa="false" schemaversion="5">
-<suite id="s1" name="2.2 Testa INLOGG" source="c:\Users\Hanzoni\Desktop\JURASTINA - UPPGIFT\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\test related\tests\kim\2.2 Testa INLOGG.robot">
-<test id="s1-t1" name="Verify Login Form Elements Exist" line="14">
-<kw name="Open Browser To Login Page" type="SETUP">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-19T15:22:20.249778" rpa="false" schemaversion="5">
+<suite id="s1" name="2.2 Kim köper biljetter utan att vara inloggad" source="c:\Users\Hanzoni\Desktop\JURASTINA - UPPGIFT\Jura-Stina-Kalle-Park\test related\tests\kim\2.2 Kim köper biljetter utan att vara inloggad.robot">
+<test id="s1-t1" name="User Cannot Buy Tickets Without Login" line="15">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-19T11:48:57.322607" level="INFO">Opening browser 'Chrome' to base url 'file:///C:/Users/Hanzoni/Desktop/Jura-Stina-Kalle-Park/Jura-Stina-Kalle-Park/website/jurap.html'.</msg>
+<msg time="2025-02-19T15:22:20.501670" level="INFO">Opening browser 'Chrome' to base url 'file:///C:/Users/Hanzoni/Desktop/JURASTINA%20-%20UPPGIFT/Jura-Stina-Kalle-Park/website/jurap.html'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-19T11:48:57.322280" elapsed="1.532590"/>
+<status status="PASS" start="2025-02-19T15:22:20.501294" elapsed="1.328571"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-19T11:48:58.855318" elapsed="0.019926"/>
+<status status="PASS" start="2025-02-19T15:22:21.830520" elapsed="0.023395"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=login-nav</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-19T11:48:58.875557" elapsed="0.075476"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-19T15:22:21.854633" elapsed="0.000515"/>
 </kw>
+<kw name="Navigate To Tickets">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-19T11:48:58.951675" level="INFO">Clicking element 'id=login-nav'.</msg>
-<arg>id=login-nav</arg>
+<msg time="2025-02-19T15:22:21.857547" level="INFO">Clicking element 'xpath=//li[@id='tickets-nav']/a'.</msg>
+<arg>${TICKETS_NAV}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-19T11:48:58.951335" elapsed="0.058273"/>
+<status status="PASS" start="2025-02-19T15:22:21.856998" elapsed="0.469889"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=login-form</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-19T11:48:59.009918" elapsed="0.017072"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TICKET_CATEGORY}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-19T15:22:22.327233" elapsed="0.210874"/>
 </kw>
-<status status="PASS" start="2025-02-19T11:48:57.321368" elapsed="1.705870"/>
+<status status="PASS" start="2025-02-19T15:22:21.856377" elapsed="0.681987"/>
 </kw>
-<kw name="Verify Login Form Elements Are Visible">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-19T11:48:59.043062" level="INFO">Element 'id=login-username' is displayed.</msg>
-<arg>id=login-username</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-19T11:48:59.028244" elapsed="0.015286"/>
+<kw name="Attempt To Add Tickets Without Login">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-19T15:22:22.539450" level="INFO">Selecting options from selection list 'id=ticket-category' by value VIP.</msg>
+<arg>${TICKET_CATEGORY}</arg>
+<arg>VIP</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-19T15:22:22.539182" elapsed="1.654629"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-19T11:48:59.055831" level="INFO">Element 'id=login-password' is displayed.</msg>
-<arg>id=login-password</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-19T11:48:59.043918" elapsed="0.012153"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T15:22:24.194460" level="INFO">Typing text '2' into text field 'id=ticket-quantity'.</msg>
+<arg>${TICKET_QUANTITY}</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T15:22:24.194121" elapsed="0.670885"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-19T11:48:59.069682" level="INFO">Element 'css=#login-form button[type='submit']' is displayed.</msg>
-<arg>css=#login-form button[type='submit']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-19T11:48:59.056275" elapsed="0.013670"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-19T15:22:24.865617" level="INFO">Clicking button 'xpath=//form[@id='ticket-form']//button[@type='submit']'.</msg>
+<arg>${ADD_TO_CART}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T15:22:24.865309" elapsed="1.068723"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-19T11:48:59.081737" level="INFO">Element 'id=login-message' is displayed.</msg>
-<arg>id=login-message</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-19T11:48:59.070156" elapsed="0.011824"/>
+<kw name="Verify Alert Message">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-02-19T15:22:25.934968" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-02-19T15:22:26.540696" level="INFO">${alert_text} = You must be logged in to purchase tickets.</msg>
+<var>${alert_text}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-02-19T15:22:25.934754" elapsed="0.606154"/>
 </kw>
-<status status="PASS" start="2025-02-19T11:48:59.027800" elapsed="0.054334"/>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${alert_text}</arg>
+<arg>${EXPECTED_ALERT_TEXT}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-02-19T15:22:26.541133" elapsed="0.000322"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_SECTION}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-19T15:22:26.541608" elapsed="0.208213"/>
+</kw>
+<status status="PASS" start="2025-02-19T15:22:25.934391" elapsed="0.815675"/>
+</kw>
+<status status="PASS" start="2025-02-19T15:22:22.538830" elapsed="4.211345"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-19T11:48:59.082602" elapsed="2.089050"/>
+<status status="PASS" start="2025-02-19T15:22:26.750585" elapsed="2.284312"/>
 </kw>
-<status status="PASS" start="2025-02-19T11:48:57.320554" elapsed="3.851843"/>
+<status status="PASS" start="2025-02-19T15:22:20.500281" elapsed="8.535154"/>
 </test>
-<status status="PASS" start="2025-02-19T11:48:57.038581" elapsed="4.135218"/>
+<status status="PASS" start="2025-02-19T15:22:20.253773" elapsed="8.782637"/>
 </suite>
 <statistics>
 <total>
@@ -76,7 +92,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="2.2 Testa INLOGG" id="s1" pass="1" fail="0" skip="0">2.2 Testa INLOGG</stat>
+<stat name="2.2 Kim köper biljetter utan att vara inloggad" id="s1" pass="1" fail="0" skip="0">2.2 Kim köper biljetter utan att vara inloggad</stat>
 </suite>
 </statistics>
 <errors>
