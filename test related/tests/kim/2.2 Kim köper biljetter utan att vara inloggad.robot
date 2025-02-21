@@ -14,7 +14,6 @@ ${EXPECTED_ALERT_TEXT}    You must be logged in to purchase tickets.
 *** Test Cases ***
 User Cannot Buy Tickets Without Login
   Open Browser    ${URL}    ${BROWSER}
-  Maximize Browser Window
   Set Selenium Speed    0.2
   Navigate To Tickets
   Attempt To Add Tickets Without Login
