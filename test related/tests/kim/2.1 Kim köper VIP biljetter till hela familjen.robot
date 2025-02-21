@@ -14,7 +14,7 @@ Complete User Journey Test
     Maximize Browser Window
     Set Selenium Speed  0.2s
     
-    # Registration Steps
+    # Registrering
     Wait Until Element Is Visible    id=register-nav
     Click Element    id=register-nav
     
