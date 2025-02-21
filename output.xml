@@ -1,98 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-20T10:55:17.983772" rpa="false" schemaversion="5">
-<suite id="s1" name="2.2 Kim köper biljetter utan att vara inloggad" source="c:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests\kim\2.2 Kim köper biljetter utan att vara inloggad.robot">
-<test id="s1-t1" name="User Cannot Buy Tickets Without Login" line="15">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-21T09:53:23.983520" rpa="false" schemaversion="5">
+<suite id="s1" name="2.1 Kim köper VIP biljetter för hela familjen" source="c:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests\kim\2.1 Kim köper VIP biljetter för hela familjen.robot">
+<test id="s1-t1" name="Kim Selects VIP Tickets For The Whole Family" line="21">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:55:18.313620" level="INFO">Opening browser 'Chrome' to base url 'file:///C:/Users/Hanzoni/Desktop/Jura-Stina-Kalle/website/jurap.html'.</msg>
+<msg time="2025-02-21T09:53:24.226268" level="INFO">Opening browser 'Chrome' to base url 'file:///C:/Users/Hanzoni/Desktop/Jura-Stina-Kalle/website/jurap.html'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-20T10:55:18.313056" elapsed="1.614668"/>
+<status status="PASS" start="2025-02-21T09:53:24.225889" elapsed="1.381945"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-20T10:55:19.928715" elapsed="0.026801"/>
+<status status="PASS" start="2025-02-21T09:53:25.608416" elapsed="0.019581"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.2</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-20T10:55:19.956852" elapsed="0.000617"/>
+<status status="PASS" start="2025-02-21T09:53:25.628497" elapsed="0.000392"/>
 </kw>
-<kw name="Navigate To Tickets">
+<kw name="Login As Kim">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:55:19.960320" level="INFO">Clicking element 'xpath=//li[@id='tickets-nav']/a'.</msg>
-<arg>${TICKETS_NAV}</arg>
+<msg time="2025-02-21T09:53:25.630078" level="INFO">Clicking element 'xpath=//li[@id='login-nav']/a'.</msg>
+<arg>${LOGIN_NAV}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-20T10:55:19.959360" elapsed="0.478706"/>
+<status status="PASS" start="2025-02-21T09:53:25.629688" elapsed="0.459240"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${TICKET_CATEGORY}</arg>
+<arg>${LOGIN_USERNAME}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-02-20T10:55:20.438395" elapsed="0.211772"/>
-</kw>
-<status status="PASS" start="2025-02-20T10:55:19.958360" elapsed="0.692108"/>
-</kw>
-<kw name="Attempt To Add Tickets Without Login">
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:55:20.652605" level="INFO">Selecting options from selection list 'id=ticket-category' by value VIP.</msg>
-<arg>${TICKET_CATEGORY}</arg>
-<arg>VIP</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-20T10:55:20.652291" elapsed="1.670849"/>
+<status status="PASS" start="2025-02-21T09:53:26.089266" elapsed="0.209687"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:55:22.323849" level="INFO">Typing text '2' into text field 'id=ticket-quantity'.</msg>
-<arg>${TICKET_QUANTITY}</arg>
-<arg>2</arg>
+<msg time="2025-02-21T09:53:26.299596" level="INFO">Typing text 'KimUsername' into text field 'id=login-username'.</msg>
+<arg>${LOGIN_USERNAME}</arg>
+<arg>KimUsername</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-20T10:55:22.323475" elapsed="0.672302"/>
+<status status="PASS" start="2025-02-21T09:53:26.299268" elapsed="0.673166"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-21T09:53:26.973095" level="INFO">Typing text 'KimPassword123' into text field 'id=login-password'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>KimPassword123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-21T09:53:26.972751" elapsed="0.673877"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:55:22.996667" level="INFO">Clicking button 'xpath=//form[@id='ticket-form']//button[@type='submit']'.</msg>
-<arg>${ADD_TO_CART}</arg>
+<msg time="2025-02-21T09:53:27.647235" level="INFO">Clicking button 'xpath=//form[@id='login-form']//button[@type='submit']'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-20T10:55:22.996275" elapsed="1.065402"/>
+<status status="PASS" start="2025-02-21T09:53:27.646931" elapsed="1.055532"/>
 </kw>
-<kw name="Verify Alert Message">
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:55:24.062710" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg time="2025-02-20T10:55:24.670335" level="INFO">${alert_text} = You must be logged in to purchase tickets.</msg>
-<var>${alert_text}</var>
-<arg>ACCEPT</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-20T10:55:24.062485" elapsed="0.608076"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${alert_text}</arg>
-<arg>${EXPECTED_ALERT_TEXT}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-02-20T10:55:24.670797" elapsed="0.000332"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<kw name="Wait Until Page Does Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-21T09:53:28.703483" level="FAIL">Variable '${LOGIN_SECTION}' not found.</msg>
 <arg>${LOGIN_SECTION}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-02-20T10:55:24.671298" elapsed="0.209504"/>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="FAIL" start="2025-02-21T09:53:28.702770" elapsed="0.001383">Variable '${LOGIN_SECTION}' not found.</status>
 </kw>
-<status status="PASS" start="2025-02-20T10:55:24.062074" elapsed="0.819005"/>
+<status status="FAIL" start="2025-02-21T09:53:25.629328" elapsed="3.075048">Variable '${LOGIN_SECTION}' not found.</status>
 </kw>
-<status status="PASS" start="2025-02-20T10:55:20.651648" elapsed="4.229626"/>
+<kw name="Navigate To Buy Tickets">
+<status status="NOT RUN" start="2025-02-21T09:53:28.704820" elapsed="0.000124"/>
+</kw>
+<kw name="Select VIP Tickets For 2 Adults">
+<status status="NOT RUN" start="2025-02-21T09:53:28.705260" elapsed="0.000096"/>
+</kw>
+<kw name="Select VIP Tickets For 2 Children">
+<status status="NOT RUN" start="2025-02-21T09:53:28.705646" elapsed="0.000087"/>
+</kw>
+<kw name="Proceed To Checkout">
+<status status="NOT RUN" start="2025-02-21T09:53:28.706020" elapsed="0.000086"/>
+</kw>
+<kw name="Confirm Purchase">
+<status status="NOT RUN" start="2025-02-21T09:53:28.706348" elapsed="0.000079"/>
+</kw>
+<kw name="Verify Purchase Summary">
+<status status="NOT RUN" start="2025-02-21T09:53:28.706780" elapsed="0.000090"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-20T10:55:24.881949" elapsed="2.312736"/>
+<status status="NOT RUN" start="2025-02-21T09:53:28.707108" elapsed="0.000079"/>
 </kw>
-<status status="PASS" start="2025-02-20T10:55:18.311946" elapsed="8.883311"/>
+<status status="FAIL" start="2025-02-21T09:53:24.224875" elapsed="4.482619">Variable '${LOGIN_SECTION}' not found.</status>
 </test>
-<status status="PASS" start="2025-02-20T10:55:17.988938" elapsed="9.207564"/>
+<status status="FAIL" start="2025-02-21T09:53:23.987256" elapsed="4.721220"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="2.2 Kim köper biljetter utan att vara inloggad" id="s1" pass="1" fail="0" skip="0">2.2 Kim köper biljetter utan att vara inloggad</stat>
+<stat name="2.1 Kim köper VIP biljetter för hela familjen" id="s1" pass="0" fail="1" skip="0">2.1 Kim köper VIP biljetter för hela familjen</stat>
 </suite>
 </statistics>
 <errors>
