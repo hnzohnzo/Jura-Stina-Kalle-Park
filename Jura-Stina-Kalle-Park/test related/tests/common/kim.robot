@@ -26,7 +26,8 @@ Navigate To Login Page
     Sleep    2s
 Fill Login Form
     [Arguments]    ${username}    ${password}
-    Wait Until Element Is Visible    xpath=//input[@id='login-username']    timeout=10s
+    Wait Until Element Is Visible    id=login-username    timeout=10s
     Input Text    id=login-username    ${username}
     Input Text    id=login-password    ${password}
-    Click Button    xpath=//button[@type='submit']
+    Click Button    xpath=//form[@id='login-form']//button[@type='submit']
+    Sleep    2s 

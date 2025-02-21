@@ -17,15 +17,14 @@ Test Teardown
     [Documentation]    Kim tries to register with already taken username
     [Tags]    registration    negative    Sumeyye
     
-    # Önce kullanıcıyı oluşturalım
     Navigate To Registration Page
     Fill Registration Form    ${STINA_USERNAME}    ${STINA_PASSWORD}
     Sleep    2s
     
-    # Şimdi aynı kullanıcı adıyla tekrar kayıt olmayı deneyelim
-    Navigate To Registration Page  
-    Fill Registration Form    ${STINA_USERNAME}    ${WRONG_PASSWORD}
-    Wait Until Page Contains    Username already exists. Please choose another    timeout=10s
+    
+    Given Navigate To Registration Page  
+    When Fill Registration Form    ${STINA_USERNAME}    ${WRONG_PASSWORD}
+    Then Wait Until Page Contains    Username already exists. Please choose another    timeout=10s
 
 1.3 - Registration With Short Password
     [Documentation]    Stina-Palle tries to register with a too short password
@@ -37,14 +36,32 @@ Test Teardown
 1.4 - Successful Login
     [Documentation]    Stina-Palle successfully logs into the website
     [Tags]    login    positive    Sumeyye
-    Given Navigate To Login Page
-    When Fill Login Form    ${STINA_USERNAME}    ${STINA_PASSWORD}
-    Then Element Should Be Visible    id=logout-nav
+   
+    Given Navigate To Registration Page
+    And Fill Registration Form    ${STINA_USERNAME}    ${STINA_PASSWORD}
+    And Wait Until Page Contains    Registration successful    timeout=10s
+    And Page Should Contain    Registration successful
+    Sleep    2s
+    
+    When Navigate To Login Page
+    And Wait Until Element Is Visible    id=login-username    timeout=10s
+    And Fill Login Form    ${STINA_USERNAME}    ${STINA_PASSWORD}
+    Sleep    2s
+    Then Wait Until Element Is Visible    id=logout-nav    timeout=10s
     And Element Should Not Be Visible    id=login-nav
 
 1.5 - Failed Login With Wrong Password
     [Documentation]    Stina-Palle tries to login with incorrect password
     [Tags]    login    negative    Sumeyye
-    Given Navigate To Login Page
-    When Fill Login Form    ${STINA_USERNAME}    ${WRONG_PASSWORD}
-    Then Page Should Contain    Invalid username or password
+    
+    Given Navigate To Registration Page
+    And Fill Registration Form    ${STINA_USERNAME}    ${STINA_PASSWORD}
+    And Wait Until Page Contains    Registration successful    timeout=10s
+    And Page Should Contain    Registration successful
+    Sleep    2s
+    
+    When Navigate To Login Page
+    And Wait Until Element Is Visible    id=login-username    timeout=10s
+    And Fill Login Form    ${STINA_USERNAME}    ${WRONG_PASSWORD}
+    Sleep    2s
+    Then Wait Until Page Contains    Invalid username or password    timeout=10s

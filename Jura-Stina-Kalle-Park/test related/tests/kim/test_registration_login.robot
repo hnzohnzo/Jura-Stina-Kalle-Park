@@ -36,14 +36,30 @@ Test Teardown    Close All Browsers
 1.4 - Successful Login
     [Documentation]    Kim successfully logs into the website
     [Tags]    login    positive    Sumeyye
-    Given Navigate To Login Page
-    When Fill Login Form    ${KIM_USERNAME}    ${KIM_PASSWORD}
-    Then Element Should Be Visible    id=logout-nav
     
+    Given Navigate To Registration Page
+    And Fill Registration Form    ${KIM_USERNAME}    ${KIM_PASSWORD}
+    And Page Should Contain    Registration successful
+    Sleep    2s    
+   
+    When Navigate To Login Page
+    And Wait Until Element Is Visible    id=login-username    timeout=10s
+    And Fill Login Form    ${KIM_USERNAME}    ${KIM_PASSWORD}
+    Sleep    2s    
+    Then Wait Until Element Is Visible    id=logout-nav    timeout=10s
+    And Element Should Not Be Visible    id=login-nav
 
 1.5 - Failed Login With Wrong Password
     [Documentation]    Kim tries to login with incorrect password
     [Tags]    login    negative    Sumeyye
-    Given Navigate To Login Page
-    When Fill Login Form    ${KIM_USERNAME}    ${WRONG_PASSWORD}
-    Then Page Should Contain    Invalid username or password    timeout=10s
+    
+    Given Navigate To Registration Page
+    And Fill Registration Form    ${KIM_USERNAME}    ${KIM_PASSWORD}
+    And Page Should Contain    Registration successful
+    Sleep    2s    
+    
+    When Navigate To Login Page
+    And Wait Until Element Is Visible    id=login-username    timeout=10s
+    And Fill Login Form    ${KIM_USERNAME}    ${WRONG_PASSWORD}
+    Sleep    2s    
+    Then Wait Until Page Contains    Invalid username or password    timeout=10s

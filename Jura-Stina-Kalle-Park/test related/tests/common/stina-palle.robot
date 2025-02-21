@@ -22,9 +22,11 @@ Navigate To Login Page
     Click Element    id=login-nav
     Wait Until Element Is Visible    id=login-section
     Sleep    2s
+
 Fill Login Form
     [Arguments]    ${username}    ${password}
     Wait Until Element Is Visible    id=login-username    timeout=10s
     Input Text    id=login-username    ${username}
     Input Text    id=login-password    ${password}
-    Click Button   xpath=//form[@id='login-form']//button[@type='submit']
+    Click Button    xpath=//form[@id='login-form']//button[@type='submit']
+    Sleep    2s
