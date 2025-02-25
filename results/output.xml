@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-20T10:30:25.415071" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-25T12:25:25.909297" rpa="false" schemaversion="5">
 <suite id="s1" name="Jura-Stina-Kalle-Park" source="C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park">
 <suite id="s1-s1" name="Jura-Stina-Kalle-Park" source="C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park">
 <suite id="s1-s1-s1" name="Test Related" source="C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\test related">
@@ -9,192 +9,259 @@
 <test id="s1-s1-s1-s1-s1-s1-t1" name="Buy ticket successful" line="11">
 <kw name="Open Browser To Page" owner="common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:30:26.195947" level="INFO">Opening browser 'chrome' to base url 'C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\website\jurap.html'.</msg>
+<msg time="2025-02-25T12:25:26.332353" level="INFO">Opening browser 'chrome' to base url 'C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\website\jurap.html'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-20T10:30:26.194416" elapsed="2.771229"/>
+<status status="PASS" start="2025-02-25T12:25:26.331860" elapsed="1.731441"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:30:28.982572" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
+<msg time="2025-02-25T12:25:28.072895" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
 <arg>${title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-02-20T10:30:28.967437" elapsed="0.016034"/>
+<status status="PASS" start="2025-02-25T12:25:28.064189" elapsed="0.008965"/>
 </kw>
 <arg>${url_jura}</arg>
 <arg>${browser_jura}</arg>
 <arg>${title_jura}</arg>
-<status status="PASS" start="2025-02-20T10:30:26.191740" elapsed="2.792557"/>
+<status status="PASS" start="2025-02-25T12:25:26.330263" elapsed="1.743089"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-25T12:25:28.074003" elapsed="0.000652"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${registration_element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-20T10:30:28.985894" elapsed="0.062039"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-20T10:30:31.050339" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-20T10:30:29.048864" elapsed="2.002066"/>
+<status status="PASS" start="2025-02-25T12:25:28.075098" elapsed="0.430579"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:30:31.052648" level="INFO">Clicking element 'XPATH=/html/body/header/div/nav/ul/li[2]/a'.</msg>
+<msg time="2025-02-25T12:25:28.507030" level="INFO">Clicking element 'XPATH=/html/body/header/div/nav/ul/li[2]/a'.</msg>
 <arg>${registration_element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-20T10:30:31.051601" elapsed="0.194550"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-20T10:30:33.249622" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-20T10:30:31.247505" elapsed="2.003199"/>
+<status status="PASS" start="2025-02-25T12:25:28.506266" elapsed="0.508156"/>
 </kw>
 <kw name="Type In Wanted Username" owner="stina-palle">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:30:33.257336" level="INFO">Typing text 'Stina-Palle' into text field 'id=reg-username'.</msg>
+<msg time="2025-02-25T12:25:29.020078" level="INFO">Typing text 'Stina-Palle' into text field 'id=reg-username'.</msg>
 <arg>${id_reg-username_element}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-20T10:30:33.255439" elapsed="0.643937"/>
+<status status="PASS" start="2025-02-25T12:25:29.019508" elapsed="0.745484"/>
 </kw>
 <arg>${username_registration_id}</arg>
 <arg>${username}</arg>
-<status status="PASS" start="2025-02-20T10:30:33.252417" elapsed="0.647636"/>
+<status status="PASS" start="2025-02-25T12:25:29.018409" elapsed="0.748206"/>
 </kw>
 <kw name="Type In Wanted Password" owner="stina-palle">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:30:33.904302" level="INFO">Typing text 'Paleontologen' into text field 'id=reg-password'.</msg>
+<msg time="2025-02-25T12:25:29.772396" level="INFO">Typing text 'Paleontologen' into text field 'id=reg-password'.</msg>
 <arg>${id_reg-password_element}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-20T10:30:33.903177" elapsed="0.484344"/>
+<status status="PASS" start="2025-02-25T12:25:29.771085" elapsed="0.769453"/>
 </kw>
 <arg>${password_registration_id}</arg>
 <arg>${password}</arg>
-<status status="PASS" start="2025-02-20T10:30:33.901261" elapsed="0.486796"/>
+<status status="PASS" start="2025-02-25T12:25:29.768819" elapsed="0.771986"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-20T10:30:36.390899" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-20T10:30:34.389078" elapsed="2.002922"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-25T12:25:30.541927" level="INFO">Clicking button 'id="submit"'.</msg>
+<msg time="2025-02-25T12:25:30.901341" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-25T12:25:30.902819" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=133.0.6943.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F6456EE5+28773]
+	(No symbol) [0x00007FF6F63C25D0]
+	(No symbol) [0x00007FF6F6258FAA]
+	(No symbol) [0x00007FF6F62609B9]
+	(No symbol) [0x00007FF6F626377C]
+	(No symbol) [0x00007FF6F626384F]
+	(No symbol) [0x00007FF6F62AEB40]
+	(No symbol) [0x00007FF6F62AF4BC]
+	(No symbol) [0x00007FF6F6302A57]
+	(No symbol) [0x00007FF6F62D728F]
+	(No symbol) [0x00007FF6F62FF6F3]
+	(No symbol) [0x00007FF6F62D7023]
+	(No symbol) [0x00007FF6F629FF5E]
+	(No symbol) [0x00007FF6F62A11E3]
+	GetHandleVerifier [0x00007FF6F67A422D+3490733]
+	GetHandleVerifier [0x00007FF6F67BBA13+3586963]
+	GetHandleVerifier [0x00007FF6F67B144D+3544525]
+	GetHandleVerifier [0x00007FF6F651C9AA+838442]
+	(No symbol) [0x00007FF6F63CD01F]
+	(No symbol) [0x00007FF6F63C95E4]
+	(No symbol) [0x00007FF6F63C9786]
+	(No symbol) [0x00007FF6F63B8CB9]
+	BaseThreadInitThunk [0x00007FF8F815E8D7+23]
+	RtlUserThreadStart [0x00007FF8F9DBBF2C+44]
+</msg>
+<arg>id="submit"</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-25T12:25:30.541383" elapsed="0.516577">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=133.0.6943.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F6456EE5+28773]
+	(No symbol) [0x00007FF6F63C25D0]
+	(No symbol) [0x00007FF6F6258FAA]
+	(No symbol) [0x00007FF6F62609B9]
+	(No symbol) [0x00007FF6F626377C]
+	(No symbol) [0x00007FF6F626384F]
+	(No symbol) [0x00007FF6F62AEB40]
+	(No symbol) [0x00007FF6F62AF4BC]
+	(No symbol) [0x00007FF6F6302A57]
+	(No symbol) [0x00007FF6F62D728F]
+	(No symbol) [0x00007FF6F62FF6F3]
+	(No symbol) [0x00007FF6F62D7023]
+	(No symbol) [0x00007FF6F629FF5E]
+	(No symbol) [0x00007FF6F62A11E3]
+	GetHandleVerifier [0x00007FF6F67A422D+3490733]
+	GetHandleVerifier [0x00007FF6F67BBA13+3586963]
+	GetHandleVerifier [0x00007FF6F67B144D+3544525]
+	GetHandleVerifier [0x00007FF6F651C9AA+838442]
+	(No symbol) [0x00007FF6F63CD01F]
+	(No symbol) [0x00007FF6F63C95E4]
+	(No symbol) [0x00007FF6F63C9786]
+	(No symbol) [0x00007FF6F63B8CB9]
+	BaseThreadInitThunk [0x00007FF8F815E8D7+23]
+	RtlUserThreadStart [0x00007FF8F9DBBF2C+44]
+</status>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-20T10:30:36.396415" elapsed="2.410581"/>
+<status status="PASS" start="2025-02-25T12:25:31.058594" elapsed="2.561363"/>
 </kw>
-<status status="PASS" start="2025-02-20T10:30:26.189036" elapsed="12.620319"/>
+<status status="FAIL" start="2025-02-25T12:25:26.328589" elapsed="7.292710">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=133.0.6943.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F6456EE5+28773]
+	(No symbol) [0x00007FF6F63C25D0]
+	(No symbol) [0x00007FF6F6258FAA]
+	(No symbol) [0x00007FF6F62609B9]
+	(No symbol) [0x00007FF6F626377C]
+	(No symbol) [0x00007FF6F626384F]
+	(No symbol) [0x00007FF6F62AEB40]
+	(No symbol) [0x00007FF6F62AF4BC]
+	(No symbol) [0x00007FF6F6302A57]
+	(No symbol) [0x00007FF6F62D728F]
+	(No symbol) [0x00007FF6F62FF6F3]
+	(No symbol) [0x00007FF6F62D7023]
+	(No symbol) [0x00007FF6F629FF5E]
+	(No symbol) [0x00007FF6F62A11E3]
+	GetHandleVerifier [0x00007FF6F67A422D+3490733]
+	GetHandleVerifier [0x00007FF6F67BBA13+3586963]
+	GetHandleVerifier [0x00007FF6F67B144D+3544525]
+	GetHandleVerifier [0x00007FF6F651C9AA+838442]
+	(No symbol) [0x00007FF6F63CD01F]
+	(No symbol) [0x00007FF6F63C95E4]
+	(No symbol) [0x00007FF6F63C9786]
+	(No symbol) [0x00007FF6F63B8CB9]
+	BaseThreadInitThunk [0x00007FF8F815E8D7+23]
+	RtlUserThreadStart [0x00007FF8F9DBBF2C+44]
+</status>
 </test>
-<test id="s1-s1-s1-s1-s1-s1-t2" name="Next test" line="23">
+<test id="s1-s1-s1-s1-s1-s1-t2" name="Next test" line="22">
 <kw name="Open Browser To Page" owner="common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:30:38.831234" level="INFO">Opening browser 'chrome' to base url 'C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\website\jurap.html'.</msg>
+<msg time="2025-02-25T12:25:33.634578" level="INFO">Opening browser 'chrome' to base url 'C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\website\jurap.html'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-20T10:30:38.828493" elapsed="2.618810"/>
+<status status="PASS" start="2025-02-25T12:25:33.633808" elapsed="1.942428"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-20T10:30:41.460802" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
+<msg time="2025-02-25T12:25:35.786197" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
 <arg>${title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-02-20T10:30:41.447955" elapsed="0.013551"/>
+<status status="PASS" start="2025-02-25T12:25:35.576541" elapsed="0.210300"/>
 </kw>
 <arg>${url_jura}</arg>
 <arg>${browser_jura}</arg>
 <arg>${title_jura}</arg>
-<status status="PASS" start="2025-02-20T10:30:38.823033" elapsed="2.638832"/>
-</kw>
-<kw name="Go to Register tab">
-<msg time="2025-02-20T10:30:41.475609" level="FAIL">No keyword with name 'Go to Register tab' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</msg>
-<status status="FAIL" start="2025-02-20T10:30:41.468031" elapsed="0.008579">No keyword with name 'Go to Register tab' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</status>
-</kw>
-<kw name="Type &quot;Stina-Palle&quot; in field Username">
-<status status="NOT RUN" start="2025-02-20T10:30:41.485761" elapsed="0.005211"/>
-</kw>
-<kw name="Type &quot;Paleontologen&quot; in field Password">
-<status status="NOT RUN" start="2025-02-20T10:30:41.500546" elapsed="0.006400"/>
+<status status="PASS" start="2025-02-25T12:25:33.631065" elapsed="2.155959"/>
 </kw>
 <kw name="Click button &quot;Register&quot;">
-<status status="NOT RUN" start="2025-02-20T10:30:41.516404" elapsed="0.038192"/>
+<msg time="2025-02-25T12:25:35.793669" level="FAIL">No keyword with name 'Click button "Register"' found. Did you try using keyword 'SeleniumLibrary.Click Button' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" start="2025-02-25T12:25:35.791578" elapsed="0.002417">No keyword with name 'Click button "Register"' found. Did you try using keyword 'SeleniumLibrary.Click Button' and forgot to use enough whitespace between keyword and arguments?</status>
 </kw>
 <kw name="-&gt; Login page">
-<status status="NOT RUN" start="2025-02-20T10:30:41.606674" elapsed="0.011835"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.797613" elapsed="0.002834"/>
 </kw>
 <kw name="Type in Registered Username (&quot;Stina-Palle&quot;) in field Username">
-<status status="NOT RUN" start="2025-02-20T10:30:41.648862" elapsed="0.005195"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.802389" elapsed="0.001669"/>
 </kw>
 <kw name="Type in Registered Password (&quot;Paleontologen&quot;) in field Password">
-<status status="NOT RUN" start="2025-02-20T10:30:41.704181" elapsed="0.017362"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.805708" elapsed="0.002650"/>
 </kw>
 <kw name="Click button &quot;Login&quot;">
-<status status="NOT RUN" start="2025-02-20T10:30:41.729105" elapsed="0.010341"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.810212" elapsed="0.001991"/>
 </kw>
 <kw name="Go to Buy Tickets">
-<status status="NOT RUN" start="2025-02-20T10:30:41.761530" elapsed="0.012827"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.817094" elapsed="0.001680"/>
 </kw>
 <kw name="Set Ticket Type to Adult">
-<status status="NOT RUN" start="2025-02-20T10:30:41.789312" elapsed="0.011120"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.820501" elapsed="0.002026"/>
 </kw>
 <kw name="Set Ticket Category to Regular Ticket">
-<status status="NOT RUN" start="2025-02-20T10:30:41.811849" elapsed="0.005921"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.824866" elapsed="0.001539"/>
 </kw>
 <kw name="Set Quantity to 1">
-<status status="NOT RUN" start="2025-02-20T10:30:41.830665" elapsed="0.015430"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.828235" elapsed="0.002473"/>
 </kw>
 <kw name="Click button &quot;Add to Cart&quot;">
-<status status="NOT RUN" start="2025-02-20T10:30:41.856842" elapsed="0.010050"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.834642" elapsed="0.002606"/>
 </kw>
 <kw name="Verifiera meddelande &quot;Item added to cart!&quot;">
-<status status="NOT RUN" start="2025-02-20T10:30:41.871916" elapsed="0.006630"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.839278" elapsed="0.001229"/>
 </kw>
 <kw name="Click button OK">
-<status status="NOT RUN" start="2025-02-20T10:30:41.883996" elapsed="0.005816"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.841907" elapsed="0.001484"/>
 </kw>
 <kw name="Go to Cart">
-<status status="NOT RUN" start="2025-02-20T10:30:41.896665" elapsed="0.008073"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.844955" elapsed="0.003518"/>
 </kw>
 <kw name="If cart contains 1 Regular Adult ticket">
-<status status="NOT RUN" start="2025-02-20T10:30:41.913901" elapsed="0.006126"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.850850" elapsed="0.001834"/>
 </kw>
 <kw name="and total = $50">
-<status status="NOT RUN" start="2025-02-20T10:30:41.926487" elapsed="0.009773"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.855007" elapsed="0.001544"/>
 </kw>
 <kw name="Click button &quot;Proceed to Checkout&quot;">
-<status status="NOT RUN" start="2025-02-20T10:30:41.946389" elapsed="0.003929"/>
+<status status="NOT RUN" start="2025-02-25T12:25:35.858237" elapsed="0.001550"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-20T10:30:41.960695" elapsed="2.295546"/>
+<status status="PASS" start="2025-02-25T12:25:35.862378" elapsed="2.321193"/>
 </kw>
-<status status="FAIL" start="2025-02-20T10:30:38.817668" elapsed="5.440715">No keyword with name 'Go to Register tab' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</status>
+<status status="FAIL" start="2025-02-25T12:25:33.627479" elapsed="4.557522">No keyword with name 'Click button "Register"' found. Did you try using keyword 'SeleniumLibrary.Click Button' and forgot to use enough whitespace between keyword and arguments?</status>
 </test>
 <doc>User 2 buying their ticket</doc>
-<status status="FAIL" start="2025-02-20T10:30:25.511790" elapsed="18.759013"/>
+<status status="FAIL" start="2025-02-25T12:25:25.958974" elapsed="12.233580"/>
 </suite>
-<status status="FAIL" start="2025-02-20T10:30:25.503677" elapsed="18.783199"/>
+<status status="FAIL" start="2025-02-25T12:25:25.956335" elapsed="12.247258"/>
 </suite>
-<status status="FAIL" start="2025-02-20T10:30:25.495649" elapsed="18.806409"/>
+<status status="FAIL" start="2025-02-25T12:25:25.952753" elapsed="12.259181"/>
 </suite>
-<status status="FAIL" start="2025-02-20T10:30:25.488082" elapsed="18.823070"/>
+<status status="FAIL" start="2025-02-25T12:25:25.947862" elapsed="12.274360"/>
 </suite>
-<status status="FAIL" start="2025-02-20T10:30:25.481300" elapsed="18.835717"/>
+<status status="FAIL" start="2025-02-25T12:25:25.944764" elapsed="12.283889"/>
 </suite>
-<status status="FAIL" start="2025-02-20T10:30:25.424330" elapsed="18.897655"/>
+<status status="FAIL" start="2025-02-25T12:25:25.915132" elapsed="12.318955"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Jura-Stina-Kalle-Park" id="s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park</stat>
-<stat name="Jura-Stina-Kalle-Park" id="s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park</stat>
-<stat name="Test Related" id="s1-s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related</stat>
-<stat name="Tests" id="s1-s1-s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests</stat>
-<stat name="Stina-Palle" id="s1-s1-s1-s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests.Stina-Palle</stat>
-<stat name="Stina-Palleticket" id="s1-s1-s1-s1-s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests.Stina-Palle.Stina-Palleticket</stat>
+<stat name="Jura-Stina-Kalle-Park" id="s1" pass="0" fail="2" skip="0">Jura-Stina-Kalle-Park</stat>
+<stat name="Jura-Stina-Kalle-Park" id="s1-s1" pass="0" fail="2" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park</stat>
+<stat name="Test Related" id="s1-s1-s1" pass="0" fail="2" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related</stat>
+<stat name="Tests" id="s1-s1-s1-s1" pass="0" fail="2" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests</stat>
+<stat name="Stina-Palle" id="s1-s1-s1-s1-s1" pass="0" fail="2" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests.Stina-Palle</stat>
+<stat name="Stina-Palleticket" id="s1-s1-s1-s1-s1-s1" pass="0" fail="2" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests.Stina-Palle.Stina-Palleticket</stat>
 </suite>
 </statistics>
 <errors>
