@@ -11,14 +11,14 @@ ${BROWSER}                                Chrome
 Complete Test
   [Documentation]                         -
 
-  1. Open Browser and URL
-  2. Navigates and Clicks on 'Buy Tickets'
-  3. Attempts to Add Tickets Without Login
-  4. Alert Message is Shown
+  Open Browser and URL
+  Navigates and Clicks on 'Buy Tickets'
+  Attempts to Add Tickets Without Login
+  Alert Message is Shown
 
 *** Keywords ***
 
-1. Open Browser and URL
+Open Browser and URL
   [Documentation]                         Öppnar Browser och Rätt URL, Speed sat till 0.2s för att enklare hänga med visuellt.
 
   Open Browser  ${URL}  ${BROWSER} 
@@ -26,14 +26,14 @@ Complete Test
   Set Selenium Speed                      0.2s
 
   
-2. Navigates and Clicks on 'Buy Tickets'
+Navigates and Clicks on 'Buy Tickets'
   [Documentation]                         -
   Set Selenium Speed                      0.5s
   Wait Until Element is Visible           xpath=//li[@id='tickets-nav']/a
   Click Element                           xpath=//li[@id='tickets-nav']/a
 
 
-3. Attempts to Add Tickets Without Login
+Attempts to Add Tickets Without Login
   [Documentation]    
 
   Wait Until Page Contains Element        id=ticket-category
@@ -43,7 +43,7 @@ Complete Test
  
 
 
-4. Alert Message is Shown
+Alert Message is Shown
   [Documentation]    
 
     ${alert_text}=    Handle Alert        ACCEPT

@@ -13,16 +13,16 @@ ${PASSWORD}                               KimPassword123
 Complete Test
   [Documentation]                         Hela Test Processen Från Registrering Till Köp av VIP-Biljetter
 
-  1. Open Browser and URL
-  2. Register New User
-  3. Login with New User
-  4. Navigate to 'Buy Tickets' and Add Two Adult VIP Tickets to Cart
-  5. Add Two Children VIP Tickets to Cart  
-  6. Proceed to Checkout, Then Show Checkout Summary
+  Open Browser and URL
+  Register New User
+  Login with New User
+  Navigate to 'Buy Tickets' and Add Two Adult VIP Tickets to Cart
+  Add Two Children VIP Tickets to Cart  
+  Proceed to Checkout, Then Show Checkout Summary
 
 *** Keywords ***
 
-1. Open Browser and URL
+Open Browser and URL
   [Documentation]                         Öppnar Browser och Rätt URL, Speed sat till 0.2s för att enklare hänga med visuellt.
 
   Open Browser  ${URL}  ${BROWSER} 
@@ -31,7 +31,7 @@ Complete Test
 
 
 
-2. Register New User
+Register New User
   [Documentation]                         Klickar på 'Register' och registrerar en användare med korrekta uppgifter
 
   Wait Until Element is Visible           id=register-nav
@@ -43,7 +43,7 @@ Complete Test
   Sleep                                   2s
 
 
-3. Login with New User
+Login with New User
   [Documentation]                         Klickar på 'Login' och loggar in med nyligen registrerad användare.
 
   Wait Until Element Is Visible           id=login-nav
@@ -57,7 +57,7 @@ Complete Test
   Element Should be Visible               id=cart-nav
 
 
-4. Navigate to 'Buy Tickets' and Add Two Adult VIP Tickets to Cart
+Navigate to 'Buy Tickets' and Add Two Adult VIP Tickets to Cart
   [Documentation]                         Klickar på 'Buy Tickets' och lägger till 2st Adult VIP Tickets till varukorgen.
 
   Wait Until Element Is Visible           id=tickets-nav
@@ -70,7 +70,7 @@ Complete Test
   Handle Alert
 
 
-5. Add Two Children VIP Tickets to Cart
+Add Two Children VIP Tickets to Cart
   [Documentation]                         Klickar på 'Buy Tickets' och lägger till 2st Children VIP Tickets till varukorgen.
 
   Select From List By Value               id=ticket-type    Child
@@ -80,7 +80,7 @@ Complete Test
   Handle Alert
 
 
-6. Proceed to Checkout, Then Show Checkout Summary
+Proceed to Checkout, Then Show Checkout Summary
   [Documentation]                         Klickar på 'Cart' och sedan på 'Proceeed to Checkout'
 
   Wait Until Element Is Visible           id=cart-nav
