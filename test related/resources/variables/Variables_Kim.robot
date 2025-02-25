@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 
 
 *** Variables ***
-${URL}              file://${EXECDIR}/website/jurap.html
+${URL}              file://${CURDIR}/../../../website/jurap.html
 ${BROWSER}          Chrome
 ${USERNAME}         KimUsername
 ${PASSWORD}         KimPassword123

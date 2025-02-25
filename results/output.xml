@@ -1,335 +1,427 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-25T21:11:48.812263" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-25T21:26:17.337291" rpa="false" schemaversion="5">
 <suite id="s1" name="Jura-Stina-Kalle" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle">
 <suite id="s1-s1" name="Test Related" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related">
 <suite id="s1-s1-s1" name="Tests" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests">
 <suite id="s1-s1-s1-s1" name="Kim" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests\kim">
-<suite id="s1-s1-s1-s1-s1" name="Kim Fails To Book Safari Without Date" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests\kim\Kim_Fails_To_Book_Safari_Without_Date.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="user attempts to book VIP-Safari tickets without choosing a Date" line="8">
-<kw name="Given the browser is open on the correct URL" owner="Keywords_Kim">
+<suite id="s1-s1-s1-s1-s1" name="Test Registration Login" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests\kim\test_registration_login.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="1.1 - Successful Registration" line="9">
+<kw name="Open Browser To Main Page" owner="common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:11:49.081394" level="INFO">Opening browser 'Chrome' to base url 'file://C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle/website/jurap.html'.</msg>
+<msg time="2025-02-25T21:26:17.580932" level="INFO">Opening browser 'chrome' to base url 'file:///Users/mac/Desktop/jurastina-alfa/jurap.html'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-25T21:11:49.081051" elapsed="1.402527"/>
+<status status="PASS" start="2025-02-25T21:26:17.580580" elapsed="1.394036"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-25T21:11:50.483884" elapsed="0.024383"/>
+<status status="PASS" start="2025-02-25T21:26:18.974928" elapsed="0.019344"/>
 </kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>0.2s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-25T21:11:50.508615" elapsed="0.000668"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-02-25T21:26:18.994566" elapsed="0.001208"/>
 </kw>
-<tag>created_by:HannesSchönberg</tag>
-<doc>Browser opens, the correct URL loads, Browser window set to maximum, Selenium speed set to 0.2s.</doc>
-<status status="PASS" start="2025-02-25T21:11:49.079039" elapsed="1.430459"/>
+<status status="PASS" start="2025-02-25T21:26:17.579806" elapsed="1.416113"/>
 </kw>
-<kw name="When the user registers a new account" owner="Keywords_Kim">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=register-nav</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:11:50.517602" elapsed="0.422571"/>
-</kw>
+<kw name="Given Navigate To Registration Page" owner="kim">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:11:50.940869" level="INFO">Clicking element 'id=register-nav'.</msg>
+<msg time="2025-02-25T21:26:18.998909" level="INFO">Clicking element 'id=register-nav'.</msg>
+<msg time="2025-02-25T21:26:19.153433" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-25T21:26:19.153848" level="FAIL">Element with locator 'id=register-nav' not found.</msg>
 <arg>id=register-nav</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:11:50.940456" elapsed="0.458207"/>
+<status status="FAIL" start="2025-02-25T21:26:18.998418" elapsed="0.172502">Element with locator 'id=register-nav' not found.</status>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=register-section</arg>
+<arg>timeout=${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:11:51.398959" elapsed="0.417102"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:11:51.816806" level="INFO">Typing text 'KimUsername' into text field 'id=reg-username'.</msg>
-<arg>id=reg-username</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:11:51.816348" elapsed="0.666090"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:11:52.483126" level="INFO">Typing text 'KimPassword123' into text field 'id=reg-password'.</msg>
-<arg>id=reg-password</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:11:52.482716" elapsed="0.653005"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:11:53.136399" level="INFO">Clicking element 'xpath=//form[@id='register-form']//button[@type='submit']'.</msg>
-<arg>xpath=//form[@id='register-form']//button[@type='submit']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:11:53.136014" elapsed="0.445122"/>
+<status status="NOT RUN" start="2025-02-25T21:26:19.171203" elapsed="0.000183"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T21:11:55.582068" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T21:11:53.581412" elapsed="2.001042"/>
+<status status="NOT RUN" start="2025-02-25T21:26:19.171553" elapsed="0.000137"/>
 </kw>
-<tag>created_by:HannesSchönberg</tag>
-<doc>The user successfully registers a new account with valid credentials.</doc>
-<status status="PASS" start="2025-02-25T21:11:50.512764" elapsed="5.069870"/>
+<status status="FAIL" start="2025-02-25T21:26:18.996299" elapsed="0.175577">Element with locator 'id=register-nav' not found.</status>
 </kw>
-<kw name="And the user logs in with the new account" owner="Keywords_Kim">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=login-nav</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:11:55.586705" elapsed="0.414362"/>
+<kw name="When Fill Registration Form" owner="kim">
+<arg>${KIM_USERNAME}</arg>
+<arg>${KIM_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-02-25T21:26:19.173924" elapsed="0.001557"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:11:56.001748" level="INFO">Clicking element 'id=login-nav'.</msg>
-<arg>id=login-nav</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:11:56.001346" elapsed="0.442628"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=login-section</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:11:56.444255" elapsed="0.413629"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:11:56.858570" level="INFO">Typing text 'KimUsername' into text field 'id=login-username'.</msg>
-<arg>id=login-username</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:11:56.858150" elapsed="0.647367"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:11:57.506225" level="INFO">Typing text 'KimPassword123' into text field 'id=login-password'.</msg>
-<arg>id=login-password</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:11:57.505788" elapsed="0.648865"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:11:58.155340" level="INFO">Clicking element 'xpath=//form[@id='login-form']//button[@type='submit']'.</msg>
-<arg>xpath=//form[@id='login-form']//button[@type='submit']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:11:58.154955" elapsed="0.441145"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=logout-nav</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:11:58.596383" elapsed="2.248390"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:01.258611" level="INFO">Element 'id=cart-nav' is displayed.</msg>
-<arg>id=cart-nav</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:12:00.845088" elapsed="0.413931"/>
-</kw>
-<tag>created_by:HannesSchönberg</tag>
-<doc>The user successfully login with new account</doc>
-<status status="PASS" start="2025-02-25T21:11:55.584764" elapsed="5.674444"/>
-</kw>
-<kw name="And the user Navigates to 'Buy Tickets'" owner="Keywords_Kim">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=tickets-nav</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:12:01.263003" elapsed="0.413077"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:01.676745" level="INFO">Clicking element 'id=tickets-nav'.</msg>
-<arg>id=tickets-nav</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:12:01.676366" elapsed="0.439661"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=tickets-section</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:12:02.116298" elapsed="0.415130"/>
-</kw>
-<tag>created_by:HannesSchönberg</tag>
-<doc>The user navigate and clicks on 'Buy Tickets'</doc>
-<status status="PASS" start="2025-02-25T21:12:01.261096" elapsed="1.270718"/>
-</kw>
-<kw name="And the user adds two Adult VIP tickets to Cart" owner="Keywords_Kim">
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:02.535886" level="INFO">Selecting options from selection list 'id=ticket-type' by value Adult.</msg>
-<arg>id=ticket-type</arg>
-<arg>Adult</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-25T21:12:02.535604" elapsed="1.237023"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:03.773307" level="INFO">Selecting options from selection list 'id=ticket-category' by value VIP.</msg>
-<arg>id=ticket-category</arg>
-<arg>VIP</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-25T21:12:03.772908" elapsed="1.656071"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:05.429660" level="INFO">Typing text '2' into text field 'id=ticket-quantity'.</msg>
-<arg>id=ticket-quantity</arg>
-<arg>2</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:12:05.429254" elapsed="0.654346"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:06.084658" level="INFO">Clicking element 'xpath=//form[@id='ticket-form']//button[@type='submit']'.</msg>
-<arg>xpath=//form[@id='ticket-form']//button[@type='submit']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:12:06.083888" elapsed="0.448194"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:06.532684" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-25T21:12:06.532357" elapsed="0.605796"/>
-</kw>
-<tag>created_by:HannesSchönberg</tag>
-<doc>The user successfully adds two Adult VIP-Tickets to cart</doc>
-<status status="PASS" start="2025-02-25T21:12:02.533684" elapsed="4.604681"/>
-</kw>
-<kw name="And the user adds two Children VIP tickets to Cart" owner="Keywords_Kim">
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:07.142604" level="INFO">Selecting options from selection list 'id=ticket-type' by value Child.</msg>
-<arg>id=ticket-type</arg>
-<arg>Child</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-25T21:12:07.142268" elapsed="1.647375"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:08.790417" level="INFO">Selecting options from selection list 'id=ticket-category' by value VIP.</msg>
-<arg>id=ticket-category</arg>
-<arg>VIP</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-25T21:12:08.789970" elapsed="1.651322"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:10.442075" level="INFO">Typing text '2' into text field 'id=ticket-quantity'.</msg>
-<arg>id=ticket-quantity</arg>
-<arg>2</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:12:10.441656" elapsed="0.646243"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:11.088591" level="INFO">Clicking element 'xpath=//form[@id='ticket-form']//button[@type='submit']'.</msg>
-<arg>xpath=//form[@id='ticket-form']//button[@type='submit']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:12:11.088184" elapsed="0.437653"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:11.526433" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-25T21:12:11.526105" elapsed="0.605826"/>
-</kw>
-<tag>created_by:HannesSchönberg</tag>
-<doc>The user successfully adds two Children VIP-Tickets to cart</doc>
-<status status="PASS" start="2025-02-25T21:12:07.140370" elapsed="4.991806"/>
-</kw>
-<kw name="And the user navigates to &quot;Book Safaris&quot;" owner="Keywords_Kim">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=safari-nav</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:12:12.136202" elapsed="0.414611"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:12.551495" level="INFO">Clicking element 'id=safari-nav'.</msg>
-<arg>id=safari-nav</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:12:12.551096" elapsed="0.445713"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=safari-section</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:12:12.997098" elapsed="0.415110"/>
-</kw>
-<tag>created_by:HannesSchönberg</tag>
-<doc>The user navigate and clicks on 'Book Safaris'</doc>
-<status status="PASS" start="2025-02-25T21:12:12.134411" elapsed="1.278022"/>
-</kw>
-<kw name="And the user tries to confirm the booking without selecting a date" owner="Keywords_Kim">
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:13.416313" level="INFO">Selecting options from selection list 'id=safari-type' by label T-Rex Rumble eXtreme Thrill Pack.</msg>
-<arg>id=safari-type</arg>
-<arg>${SAFARI_TYPE}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-02-25T21:12:13.415946" elapsed="1.650867"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:15.067497" level="INFO">Clicking element 'xpath=//form[@id='safari-form']//button[@type='submit']'.</msg>
-<arg>xpath=//form[@id='safari-form']//button[@type='submit']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:12:15.067096" elapsed="0.454691"/>
-</kw>
-<tag>created_by:HannesSchönberg</tag>
-<doc>The user attempts to confirm the Safari booking without selecting a date.</doc>
-<status status="PASS" start="2025-02-25T21:12:13.414343" elapsed="2.107676"/>
-</kw>
-<kw name="Then an error message should be displayed" owner="Keywords_Kim">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:15.525988" level="INFO">Clicking element 'xpath=//form[@id='safari-form']//button[@type='submit']'.</msg>
-<arg>xpath=//form[@id='safari-form']//button[@type='submit']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:12:15.525695" elapsed="0.459513"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T21:12:16.986211" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T21:12:15.985487" elapsed="1.001123"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:12:16.987780" level="INFO">Executing JavaScript:
-return document.getElementById('safari-date').validationMessage;
-Without any arguments.</msg>
-<msg time="2025-02-25T21:12:17.192538" level="INFO">${error_message} = Fyll i det här fältet.</msg>
-<var>${error_message}</var>
-<arg>return document.getElementById('safari-date').validationMessage;</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-02-25T21:12:16.986911" elapsed="0.205965"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${error_message}</arg>
-<arg>Fyll i det här fältet.</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-02-25T21:12:17.193120" elapsed="0.000484"/>
-</kw>
-<tag>created_by:HannesSchönberg</tag>
-<doc>The System checks if the browser displays the required field error message.</doc>
-<status status="PASS" start="2025-02-25T21:12:15.523966" elapsed="1.669932"/>
+<kw name="Then Page Should Contain" owner="SeleniumLibrary">
+<arg>Registration successful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:19.177125" elapsed="0.003438"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-02-25T21:12:17.196393" elapsed="2.287032"/>
+<status status="PASS" start="2025-02-25T21:26:19.183908" elapsed="2.092848"/>
 </kw>
-<doc>Scenario: Kim attempts to book VIP-Safari tickets without choosing a Date</doc>
-<tag>created_by:HannesSchönberg</tag>
-<tag>functionality:VIP-Safari_tickets_purchase</tag>
-<tag>status:Approved</tag>
-<tag>type:negative</tag>
-<status status="PASS" start="2025-02-25T21:11:49.078018" elapsed="30.405728"/>
+<doc>Kim successfully registers an account</doc>
+<tag>positive</tag>
+<tag>registration</tag>
+<tag>Sumeyye</tag>
+<status status="FAIL" start="2025-02-25T21:26:17.578811" elapsed="3.698251">Element with locator 'id=register-nav' not found.</status>
 </test>
-<status status="PASS" start="2025-02-25T21:11:48.839357" elapsed="30.645747"/>
+<test id="s1-s1-s1-s1-s1-t2" name="1.2 - Registration With Existing Username" line="16">
+<kw name="Open Browser To Main Page" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-25T21:26:21.279449" level="INFO">Opening browser 'chrome' to base url 'file:///Users/mac/Desktop/jurastina-alfa/jurap.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-25T21:26:21.279125" elapsed="1.392048"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-25T21:26:22.671421" elapsed="0.020607"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-02-25T21:26:22.692265" elapsed="0.001072"/>
+</kw>
+<status status="PASS" start="2025-02-25T21:26:21.278758" elapsed="1.414705"/>
+</kw>
+<kw name="Navigate To Registration Page" owner="kim">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-25T21:26:22.694569" level="INFO">Clicking element 'id=register-nav'.</msg>
+<msg time="2025-02-25T21:26:22.869429" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-65.png"&gt;&lt;img src="selenium-screenshot-65.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-25T21:26:22.869953" level="FAIL">Element with locator 'id=register-nav' not found.</msg>
+<arg>id=register-nav</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-25T21:26:22.694149" elapsed="0.178115">Element with locator 'id=register-nav' not found.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=register-section</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:22.872657" elapsed="0.000252"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:22.873138" elapsed="0.000185"/>
+</kw>
+<status status="FAIL" start="2025-02-25T21:26:22.693811" elapsed="0.179709">Element with locator 'id=register-nav' not found.</status>
+</kw>
+<kw name="Fill Registration Form" owner="kim">
+<arg>${KIM_USERNAME}</arg>
+<arg>${KIM_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-02-25T21:26:22.873897" elapsed="0.000188"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:22.874334" elapsed="0.000168"/>
+</kw>
+<kw name="Navigate To Registration Page" owner="kim">
+<status status="NOT RUN" start="2025-02-25T21:26:22.874768" elapsed="0.000163"/>
+</kw>
+<kw name="Fill Registration Form" owner="kim">
+<arg>${KIM_USERNAME}</arg>
+<arg>${WRONG_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-02-25T21:26:22.875165" elapsed="0.000158"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Username already exists. Please choose another</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:22.875565" elapsed="0.000186"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-02-25T21:26:22.876175" elapsed="2.083452"/>
+</kw>
+<doc>Kim tries to register with already taken username</doc>
+<tag>negative</tag>
+<tag>registration</tag>
+<tag>Sumeyye</tag>
+<status status="FAIL" start="2025-02-25T21:26:21.277999" elapsed="3.681929">Element with locator 'id=register-nav' not found.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t3" name="1.3 - Registration With Short Password" line="30">
+<kw name="Open Browser To Main Page" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-25T21:26:24.962468" level="INFO">Opening browser 'chrome' to base url 'file:///Users/mac/Desktop/jurastina-alfa/jurap.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-25T21:26:24.962143" elapsed="1.384387"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-25T21:26:26.346861" elapsed="0.020130"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-02-25T21:26:26.367229" elapsed="0.001065"/>
+</kw>
+<status status="PASS" start="2025-02-25T21:26:24.961603" elapsed="1.406811"/>
+</kw>
+<kw name="Given Navigate To Registration Page" owner="kim">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-25T21:26:26.371383" level="INFO">Clicking element 'id=register-nav'.</msg>
+<msg time="2025-02-25T21:26:26.523692" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-66.png"&gt;&lt;img src="selenium-screenshot-66.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-25T21:26:26.524209" level="FAIL">Element with locator 'id=register-nav' not found.</msg>
+<arg>id=register-nav</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-25T21:26:26.371113" elapsed="0.155173">Element with locator 'id=register-nav' not found.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=register-section</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:26.526585" elapsed="0.000184"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:26.526939" elapsed="0.000148"/>
+</kw>
+<status status="FAIL" start="2025-02-25T21:26:26.368765" elapsed="0.158501">Element with locator 'id=register-nav' not found.</status>
+</kw>
+<kw name="When Fill Registration Form" owner="kim">
+<arg>${KIM_USERNAME}</arg>
+<arg>${SHORT_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-02-25T21:26:34.549874" elapsed="0.001759"/>
+</kw>
+<kw name="Then Page Should Contain" owner="SeleniumLibrary">
+<arg>Password must be at least 8 characters long</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:34.553304" elapsed="0.003166"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-02-25T21:26:34.559735" elapsed="2.047162"/>
+</kw>
+<doc>Kim tries to register with a too short password</doc>
+<tag>negative</tag>
+<tag>registration</tag>
+<tag>Sumeyye</tag>
+<status status="FAIL" start="2025-02-25T21:26:24.960890" elapsed="11.646303">Element with locator 'id=register-nav' not found.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t4" name="1.4 - Successful Login" line="37">
+<kw name="Open Browser To Main Page" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-25T21:26:36.609575" level="INFO">Opening browser 'chrome' to base url 'file:///Users/mac/Desktop/jurastina-alfa/jurap.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-25T21:26:36.609254" elapsed="1.392570"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-25T21:26:38.002087" elapsed="0.020065"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-02-25T21:26:38.022393" elapsed="0.001180"/>
+</kw>
+<status status="PASS" start="2025-02-25T21:26:36.608848" elapsed="1.414908"/>
+</kw>
+<kw name="Given Navigate To Registration Page" owner="kim">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-25T21:26:38.026529" level="INFO">Clicking element 'id=register-nav'.</msg>
+<msg time="2025-02-25T21:26:38.186977" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-67.png"&gt;&lt;img src="selenium-screenshot-67.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-25T21:26:38.187408" level="FAIL">Element with locator 'id=register-nav' not found.</msg>
+<arg>id=register-nav</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-25T21:26:38.026251" elapsed="0.163084">Element with locator 'id=register-nav' not found.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=register-section</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:38.189660" elapsed="0.000224"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:38.190049" elapsed="0.000206"/>
+</kw>
+<status status="FAIL" start="2025-02-25T21:26:38.024144" elapsed="0.166326">Element with locator 'id=register-nav' not found.</status>
+</kw>
+<kw name="And Fill Registration Form" owner="kim">
+<arg>${KIM_USERNAME}</arg>
+<arg>${KIM_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-02-25T21:26:38.193163" elapsed="0.001602"/>
+</kw>
+<kw name="And Page Should Contain" owner="SeleniumLibrary">
+<arg>Registration successful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:38.196393" elapsed="0.003003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:38.202202" elapsed="0.000139"/>
+</kw>
+<kw name="When Navigate To Login Page" owner="kim">
+<status status="NOT RUN" start="2025-02-25T21:26:38.202576" elapsed="0.001453"/>
+</kw>
+<kw name="And Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login-username</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:38.205635" elapsed="0.001601"/>
+</kw>
+<kw name="And Fill Login Form" owner="kim">
+<arg>${KIM_USERNAME}</arg>
+<arg>${KIM_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-02-25T21:26:38.208965" elapsed="0.001108"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:38.211231" elapsed="0.000161"/>
+</kw>
+<kw name="Then Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=logout-nav</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:38.211668" elapsed="0.001574"/>
+</kw>
+<kw name="And Element Should Not Be Visible" owner="SeleniumLibrary">
+<arg>id=login-nav</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:38.214956" elapsed="0.002324"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-02-25T21:26:38.220587" elapsed="2.085351"/>
+</kw>
+<doc>Kim successfully logs into the website</doc>
+<tag>login</tag>
+<tag>positive</tag>
+<tag>Sumeyye</tag>
+<status status="FAIL" start="2025-02-25T21:26:36.608163" elapsed="3.698078">Element with locator 'id=register-nav' not found.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t5" name="1.5 - Failed Login With Wrong Password" line="53">
+<kw name="Open Browser To Main Page" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-25T21:26:40.308778" level="INFO">Opening browser 'chrome' to base url 'file:///Users/mac/Desktop/jurastina-alfa/jurap.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-25T21:26:40.308455" elapsed="1.406415"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-25T21:26:41.715129" elapsed="0.022084"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-02-25T21:26:41.737484" elapsed="0.001276"/>
+</kw>
+<status status="PASS" start="2025-02-25T21:26:40.308068" elapsed="1.430841"/>
+</kw>
+<kw name="Given Navigate To Registration Page" owner="kim">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-25T21:26:41.741755" level="INFO">Clicking element 'id=register-nav'.</msg>
+<msg time="2025-02-25T21:26:41.896932" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-68.png"&gt;&lt;img src="selenium-screenshot-68.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-25T21:26:41.897486" level="FAIL">Element with locator 'id=register-nav' not found.</msg>
+<arg>id=register-nav</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-25T21:26:41.741385" elapsed="0.158305">Element with locator 'id=register-nav' not found.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=register-section</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:41.900043" elapsed="0.000237"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:41.900484" elapsed="0.000181"/>
+</kw>
+<status status="FAIL" start="2025-02-25T21:26:41.739251" elapsed="0.161721">Element with locator 'id=register-nav' not found.</status>
+</kw>
+<kw name="And Fill Registration Form" owner="kim">
+<arg>${KIM_USERNAME}</arg>
+<arg>${KIM_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-02-25T21:26:41.903317" elapsed="0.001594"/>
+</kw>
+<kw name="And Page Should Contain" owner="SeleniumLibrary">
+<arg>Registration successful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:41.906517" elapsed="0.003180"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:41.912743" elapsed="0.000184"/>
+</kw>
+<kw name="When Navigate To Login Page" owner="kim">
+<status status="NOT RUN" start="2025-02-25T21:26:41.913215" elapsed="0.001504"/>
+</kw>
+<kw name="And Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login-username</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:41.916351" elapsed="0.001694"/>
+</kw>
+<kw name="And Fill Login Form" owner="kim">
+<arg>${KIM_USERNAME}</arg>
+<arg>${WRONG_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-02-25T21:26:41.919851" elapsed="0.001177"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:41.922489" elapsed="0.000250"/>
+</kw>
+<kw name="Then Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid username or password</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-02-25T21:26:41.923104" elapsed="0.002463"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-02-25T21:26:41.928206" elapsed="2.089777"/>
+</kw>
+<doc>Kim tries to login with incorrect password</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<tag>Sumeyye</tag>
+<status status="FAIL" start="2025-02-25T21:26:40.307167" elapsed="3.711113">Element with locator 'id=register-nav' not found.</status>
+</test>
+<doc>Test cases for Kim registration and login functionality</doc>
+<status status="FAIL" start="2025-02-25T21:26:17.364438" elapsed="26.654935"/>
 </suite>
-<status status="PASS" start="2025-02-25T21:11:48.837771" elapsed="30.648743"/>
+<status status="FAIL" start="2025-02-25T21:26:17.362978" elapsed="26.657667"/>
 </suite>
-<status status="PASS" start="2025-02-25T21:11:48.836042" elapsed="30.651731"/>
+<status status="FAIL" start="2025-02-25T21:26:17.361478" elapsed="26.660114"/>
 </suite>
-<status status="PASS" start="2025-02-25T21:11:48.834394" elapsed="30.654651"/>
+<status status="FAIL" start="2025-02-25T21:26:17.359916" elapsed="26.662570"/>
 </suite>
-<status status="PASS" start="2025-02-25T21:11:48.816470" elapsed="30.674093"/>
+<status status="FAIL" start="2025-02-25T21:26:17.341607" elapsed="26.681799"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">created_by:HannesSchönberg</stat>
-<stat pass="1" fail="0" skip="0">functionality:VIP-Safari_tickets_purchase</stat>
-<stat pass="1" fail="0" skip="0">status:Approved</stat>
-<stat pass="1" fail="0" skip="0">type:negative</stat>
+<stat pass="0" fail="2" skip="0">login</stat>
+<stat pass="0" fail="3" skip="0">negative</stat>
+<stat pass="0" fail="2" skip="0">positive</stat>
+<stat pass="0" fail="3" skip="0">registration</stat>
+<stat pass="0" fail="5" skip="0">Sumeyye</stat>
 </tag>
 <suite>
-<stat name="Jura-Stina-Kalle" id="s1" pass="1" fail="0" skip="0">Jura-Stina-Kalle</stat>
-<stat name="Test Related" id="s1-s1" pass="1" fail="0" skip="0">Jura-Stina-Kalle.Test Related</stat>
-<stat name="Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">Jura-Stina-Kalle.Test Related.Tests</stat>
-<stat name="Kim" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Jura-Stina-Kalle.Test Related.Tests.Kim</stat>
-<stat name="Kim Fails To Book Safari Without Date" id="s1-s1-s1-s1-s1" pass="1" fail="0" skip="0">Jura-Stina-Kalle.Test Related.Tests.Kim.Kim Fails To Book Safari Without Date</stat>
+<stat name="Jura-Stina-Kalle" id="s1" pass="0" fail="5" skip="0">Jura-Stina-Kalle</stat>
+<stat name="Test Related" id="s1-s1" pass="0" fail="5" skip="0">Jura-Stina-Kalle.Test Related</stat>
+<stat name="Tests" id="s1-s1-s1" pass="0" fail="5" skip="0">Jura-Stina-Kalle.Test Related.Tests</stat>
+<stat name="Kim" id="s1-s1-s1-s1" pass="0" fail="5" skip="0">Jura-Stina-Kalle.Test Related.Tests.Kim</stat>
+<stat name="Test Registration Login" id="s1-s1-s1-s1-s1" pass="0" fail="5" skip="0">Jura-Stina-Kalle.Test Related.Tests.Kim.Test Registration Login</stat>
 </suite>
 </statistics>
 <errors>
