@@ -37,7 +37,8 @@ weekday = "002025-06-25"
 weekend = "002025-06-28"
 
 safari_error_message_element = "id=safari-message"
-safari_error_message_text = "You must purchase a general admission ticket before booking a safari."
+safari_no_ticket_text = "You must purchase a general admission ticket before booking a safari."
+safari_vip_ticket_text = "VIP tickets required to book safaris on weekends."
 
 
 

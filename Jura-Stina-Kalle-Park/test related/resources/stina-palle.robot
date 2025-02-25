@@ -3,6 +3,11 @@ Documentation    Keywords för User 2 Stina-Palle
 Library    SeleniumLibrary
 
 *** Keywords ***
+Open Browser To Page
+    [Arguments]    ${url}    ${browser}    ${title}
+    Open Browser    ${url}    ${browser}
+    Title Should Be    ${title}
+    
 Type In Wanted Username
     [Arguments]    ${id_reg-username_element}    ${username}
     Input Text    ${id_reg-username_element}    ${username}
