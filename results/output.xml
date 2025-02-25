@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-17T11:48:11.483561" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-20T10:30:25.415071" rpa="false" schemaversion="5">
 <suite id="s1" name="Jura-Stina-Kalle-Park" source="C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park">
 <suite id="s1-s1" name="Jura-Stina-Kalle-Park" source="C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park">
 <suite id="s1-s1-s1" name="Test Related" source="C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\test related">
@@ -9,57 +9,192 @@
 <test id="s1-s1-s1-s1-s1-s1-t1" name="Buy ticket successful" line="11">
 <kw name="Open Browser To Page" owner="common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-17T11:48:11.903272" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/mlelo/OneDrive/Documents/GitHub/Jura-Stina-Kalle-Park/../website/jurap.html'.</msg>
+<msg time="2025-02-20T10:30:26.195947" level="INFO">Opening browser 'chrome' to base url 'C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\website\jurap.html'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-17T11:48:11.902711" elapsed="1.713030"/>
+<status status="PASS" start="2025-02-20T10:30:26.194416" elapsed="2.771229"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-17T11:48:13.812753" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-02-17T11:48:13.813431" level="FAIL">Title should have been 'Jura-Stina-Kalle Park' but was 'file:///C:/Users/mlelo/OneDrive/Documents/GitHub/website/jurap.html'.</msg>
+<msg time="2025-02-20T10:30:28.982572" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
 <arg>${title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2025-02-17T11:48:13.616068" elapsed="0.201430">Title should have been 'Jura-Stina-Kalle Park' but was 'file:///C:/Users/mlelo/OneDrive/Documents/GitHub/website/jurap.html'.</status>
+<status status="PASS" start="2025-02-20T10:30:28.967437" elapsed="0.016034"/>
 </kw>
 <arg>${url_jura}</arg>
 <arg>${browser_jura}</arg>
 <arg>${title_jura}</arg>
-<status status="FAIL" start="2025-02-17T11:48:11.901378" elapsed="1.916416">Title should have been 'Jura-Stina-Kalle Park' but was 'file:///C:/Users/mlelo/OneDrive/Documents/GitHub/website/jurap.html'.</status>
+<status status="PASS" start="2025-02-20T10:30:26.191740" elapsed="2.792557"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${registration_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-20T10:30:28.985894" elapsed="0.062039"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-20T10:30:31.050339" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-20T10:30:29.048864" elapsed="2.002066"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-20T10:30:31.052648" level="INFO">Clicking element 'XPATH=/html/body/header/div/nav/ul/li[2]/a'.</msg>
+<arg>${registration_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-20T10:30:31.051601" elapsed="0.194550"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-20T10:30:33.249622" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-20T10:30:31.247505" elapsed="2.003199"/>
+</kw>
+<kw name="Type In Wanted Username" owner="stina-palle">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-20T10:30:33.257336" level="INFO">Typing text 'Stina-Palle' into text field 'id=reg-username'.</msg>
+<arg>${id_reg-username_element}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-20T10:30:33.255439" elapsed="0.643937"/>
+</kw>
+<arg>${username_registration_id}</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-02-20T10:30:33.252417" elapsed="0.647636"/>
+</kw>
+<kw name="Type In Wanted Password" owner="stina-palle">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-20T10:30:33.904302" level="INFO">Typing text 'Paleontologen' into text field 'id=reg-password'.</msg>
+<arg>${id_reg-password_element}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-20T10:30:33.903177" elapsed="0.484344"/>
+</kw>
+<arg>${password_registration_id}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-02-20T10:30:33.901261" elapsed="0.486796"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-20T10:30:36.390899" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-20T10:30:34.389078" elapsed="2.002922"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-17T11:48:13.818371" elapsed="2.150785"/>
+<status status="PASS" start="2025-02-20T10:30:36.396415" elapsed="2.410581"/>
 </kw>
-<status status="FAIL" start="2025-02-17T11:48:11.899935" elapsed="4.070580">Setup failed:
-Title should have been 'Jura-Stina-Kalle Park' but was 'file:///C:/Users/mlelo/OneDrive/Documents/GitHub/website/jurap.html'.</status>
+<status status="PASS" start="2025-02-20T10:30:26.189036" elapsed="12.620319"/>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t2" name="Next test" line="23">
+<kw name="Open Browser To Page" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-20T10:30:38.831234" level="INFO">Opening browser 'chrome' to base url 'C:\Users\mlelo\OneDrive\Documents\GitHub\Jura-Stina-Kalle-Park\Jura-Stina-Kalle-Park\website\jurap.html'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-20T10:30:38.828493" elapsed="2.618810"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-20T10:30:41.460802" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-02-20T10:30:41.447955" elapsed="0.013551"/>
+</kw>
+<arg>${url_jura}</arg>
+<arg>${browser_jura}</arg>
+<arg>${title_jura}</arg>
+<status status="PASS" start="2025-02-20T10:30:38.823033" elapsed="2.638832"/>
+</kw>
+<kw name="Go to Register tab">
+<msg time="2025-02-20T10:30:41.475609" level="FAIL">No keyword with name 'Go to Register tab' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" start="2025-02-20T10:30:41.468031" elapsed="0.008579">No keyword with name 'Go to Register tab' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<kw name="Type &quot;Stina-Palle&quot; in field Username">
+<status status="NOT RUN" start="2025-02-20T10:30:41.485761" elapsed="0.005211"/>
+</kw>
+<kw name="Type &quot;Paleontologen&quot; in field Password">
+<status status="NOT RUN" start="2025-02-20T10:30:41.500546" elapsed="0.006400"/>
+</kw>
+<kw name="Click button &quot;Register&quot;">
+<status status="NOT RUN" start="2025-02-20T10:30:41.516404" elapsed="0.038192"/>
+</kw>
+<kw name="-&gt; Login page">
+<status status="NOT RUN" start="2025-02-20T10:30:41.606674" elapsed="0.011835"/>
+</kw>
+<kw name="Type in Registered Username (&quot;Stina-Palle&quot;) in field Username">
+<status status="NOT RUN" start="2025-02-20T10:30:41.648862" elapsed="0.005195"/>
+</kw>
+<kw name="Type in Registered Password (&quot;Paleontologen&quot;) in field Password">
+<status status="NOT RUN" start="2025-02-20T10:30:41.704181" elapsed="0.017362"/>
+</kw>
+<kw name="Click button &quot;Login&quot;">
+<status status="NOT RUN" start="2025-02-20T10:30:41.729105" elapsed="0.010341"/>
+</kw>
+<kw name="Go to Buy Tickets">
+<status status="NOT RUN" start="2025-02-20T10:30:41.761530" elapsed="0.012827"/>
+</kw>
+<kw name="Set Ticket Type to Adult">
+<status status="NOT RUN" start="2025-02-20T10:30:41.789312" elapsed="0.011120"/>
+</kw>
+<kw name="Set Ticket Category to Regular Ticket">
+<status status="NOT RUN" start="2025-02-20T10:30:41.811849" elapsed="0.005921"/>
+</kw>
+<kw name="Set Quantity to 1">
+<status status="NOT RUN" start="2025-02-20T10:30:41.830665" elapsed="0.015430"/>
+</kw>
+<kw name="Click button &quot;Add to Cart&quot;">
+<status status="NOT RUN" start="2025-02-20T10:30:41.856842" elapsed="0.010050"/>
+</kw>
+<kw name="Verifiera meddelande &quot;Item added to cart!&quot;">
+<status status="NOT RUN" start="2025-02-20T10:30:41.871916" elapsed="0.006630"/>
+</kw>
+<kw name="Click button OK">
+<status status="NOT RUN" start="2025-02-20T10:30:41.883996" elapsed="0.005816"/>
+</kw>
+<kw name="Go to Cart">
+<status status="NOT RUN" start="2025-02-20T10:30:41.896665" elapsed="0.008073"/>
+</kw>
+<kw name="If cart contains 1 Regular Adult ticket">
+<status status="NOT RUN" start="2025-02-20T10:30:41.913901" elapsed="0.006126"/>
+</kw>
+<kw name="and total = $50">
+<status status="NOT RUN" start="2025-02-20T10:30:41.926487" elapsed="0.009773"/>
+</kw>
+<kw name="Click button &quot;Proceed to Checkout&quot;">
+<status status="NOT RUN" start="2025-02-20T10:30:41.946389" elapsed="0.003929"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-20T10:30:41.960695" elapsed="2.295546"/>
+</kw>
+<status status="FAIL" start="2025-02-20T10:30:38.817668" elapsed="5.440715">No keyword with name 'Go to Register tab' found. Did you try using keyword 'SeleniumLibrary.Go To' and forgot to use enough whitespace between keyword and arguments?</status>
 </test>
 <doc>User 2 buying their ticket</doc>
-<status status="FAIL" start="2025-02-17T11:48:11.534145" elapsed="4.444367"/>
+<status status="FAIL" start="2025-02-20T10:30:25.511790" elapsed="18.759013"/>
 </suite>
-<status status="FAIL" start="2025-02-17T11:48:11.530942" elapsed="4.460456"/>
+<status status="FAIL" start="2025-02-20T10:30:25.503677" elapsed="18.783199"/>
 </suite>
-<status status="FAIL" start="2025-02-17T11:48:11.528144" elapsed="4.474847"/>
+<status status="FAIL" start="2025-02-20T10:30:25.495649" elapsed="18.806409"/>
 </suite>
-<status status="FAIL" start="2025-02-17T11:48:11.524501" elapsed="4.488624"/>
+<status status="FAIL" start="2025-02-20T10:30:25.488082" elapsed="18.823070"/>
 </suite>
-<status status="FAIL" start="2025-02-17T11:48:11.521579" elapsed="4.496144"/>
+<status status="FAIL" start="2025-02-20T10:30:25.481300" elapsed="18.835717"/>
 </suite>
-<status status="FAIL" start="2025-02-17T11:48:11.488257" elapsed="4.533273"/>
+<status status="FAIL" start="2025-02-20T10:30:25.424330" elapsed="18.897655"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Jura-Stina-Kalle-Park" id="s1" pass="0" fail="1" skip="0">Jura-Stina-Kalle-Park</stat>
-<stat name="Jura-Stina-Kalle-Park" id="s1-s1" pass="0" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park</stat>
-<stat name="Test Related" id="s1-s1-s1" pass="0" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related</stat>
-<stat name="Tests" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests</stat>
-<stat name="Stina-Palle" id="s1-s1-s1-s1-s1" pass="0" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests.Stina-Palle</stat>
-<stat name="Stina-Palleticket" id="s1-s1-s1-s1-s1-s1" pass="0" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests.Stina-Palle.Stina-Palleticket</stat>
+<stat name="Jura-Stina-Kalle-Park" id="s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park</stat>
+<stat name="Jura-Stina-Kalle-Park" id="s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park</stat>
+<stat name="Test Related" id="s1-s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related</stat>
+<stat name="Tests" id="s1-s1-s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests</stat>
+<stat name="Stina-Palle" id="s1-s1-s1-s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests.Stina-Palle</stat>
+<stat name="Stina-Palleticket" id="s1-s1-s1-s1-s1-s1" pass="1" fail="1" skip="0">Jura-Stina-Kalle-Park.Jura-Stina-Kalle-Park.Test Related.Tests.Stina-Palle.Stina-Palleticket</stat>
 </suite>
 </statistics>
 <errors>

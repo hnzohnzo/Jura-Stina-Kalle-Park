@@ -11,11 +11,16 @@ standard_timeout = "10s"
  
 # Jura specific
 browser_jura = "chrome"
-url_jura = f"file:///{current_directory}/../website/jurap.html"
+url_jura = f"C:\\Users\\mlelo\\OneDrive\\Documents\\GitHub\\Jura-Stina-Kalle-Park\\Jura-Stina-Kalle-Park\\website\\jurap.html"
 title_jura = "Jura-Stina-Kalle Park"
 
-username_input_id_demo = "id=username"
-password_input_id_demo = "id=password"
+registration_element = "XPATH=/html/body/header/div/nav/ul/li[2]/a"
+
+username = "Stina-Palle"
+password = "Paleontologen"
+
+username_registration_id = "id=reg-username"
+password_registration_id = "id=reg-password"
 login_button_demo = "id=login-button"
 
 valid_username_demo = "test"

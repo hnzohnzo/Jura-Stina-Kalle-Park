@@ -9,6 +9,18 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Buy ticket successful
+    Wait Until Element Is Visible    ${registration_element} 
+    Sleep    2s 
+    Click Element    ${registration_element}
+    Sleep    2s
+    Type In Wanted Username    ${username_registration_id}    ${username}
+    Type In Wanted Password    ${password_registration_id}    ${password}
+    Sleep    2s
+    
+     
+    
+
+Next test
     Go to Register tab
     Type "Stina-Palle" in field Username
     Type "Paleontologen" in field Password
