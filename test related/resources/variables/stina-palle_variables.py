@@ -1,12 +1,17 @@
 ## created_by:MoaRosvall 
 ## Variables for stina-palle_ticket.robot and stina-palle_safari.robot
 
+import os
+ 
+current_directory = os.getcwd().replace('\\', '/')
+
+
 # Timeouts
 standard_timeout = "10s"
  
 # Setup
 browser_jura = "chrome"
-url_jura = f"C:\\Users\\mlelo\\OneDrive\\Documents\\GitHub\\Jura-Stina-Kalle-Park\\website\\jurap.html"
+url_jura = f"file:///{current_directory}/website\\jurap.html"
 title_jura = "Jura-Stina-Kalle Park"
 
 # Tabs
