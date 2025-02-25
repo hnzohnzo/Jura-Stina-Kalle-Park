@@ -1,8 +1,8 @@
 *** Settings ***
-Documentation    User 2 (Stina-Palle) buying their ticket. //Moa
+Documentation    [Moa, Grupp 5] User 2 (Stina-Palle) buying their ticket.
 Library    SeleniumLibrary
 Resource    ../../resources/stina-palle_keywords.robot
-Variables    ../../resources/variables.py
+Variables    ../../resources/stina-palle_variables.py
 Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_jura}
 Test Teardown    Close Browser
 

@@ -1,7 +1,8 @@
 *** Settings ***
-Documentation    [Moa] All test cases where user 2 is booking safaris
+Test Tags    Moa    Grupp 5
+Documentation    All test cases where user 2 is booking safaris
 Resource    ../../resources/stina-palle_keywords.robot
-Variables    ../../resources/variables.py
+Variables    ../../resources/stina-palle_variables.py
 Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_jura}
 Test Teardown    Close Browser
 
