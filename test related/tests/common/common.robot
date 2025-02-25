@@ -4,7 +4,7 @@ Library    BuiltIn
 
 *** Variables ***
 ${BROWSER}    chrome
-${URL}    file:///Users/mac/Desktop/jurastina-alfa/jurap.html    
+${URL}              file://${CURDIR}/../../../website/jurap.html    
 ${TIMEOUT}    10s
 
 *** Keywords ***
