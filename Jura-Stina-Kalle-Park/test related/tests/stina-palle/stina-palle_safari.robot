@@ -1,13 +1,14 @@
 *** Settings ***
-Test Tags    Moa    Grupp 5
 Documentation    All test cases where user 2 is booking safaris
+Test Tags    created_by:MoaRosvall   
 Resource    ../../resources/stina-palle_keywords.robot
 Variables    ../../resources/stina-palle_variables.py
 Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_jura}
 Test Teardown    Close Browser
 
 *** Test Cases ***
-3.1, 3.2 Stina-Palle bokar herbivore - safari och T-Rex - safari på en vardag
+3.1, 3.2 Stina-Palle bokar herbivore-safari och T-Rex-safari på en vardag
+    Maximize Browser Window
     Set Selenium Speed    0.2s
     Wait Until Element Is Visible    ${registration_element} 
     Click Element    ${registration_element}

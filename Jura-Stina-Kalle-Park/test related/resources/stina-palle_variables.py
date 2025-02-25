@@ -1,4 +1,5 @@
-## Grupp 5, Moa's variables for stina-palle_ticket.robot and stina-palle_safari.robot
+## created_by:MoaRosvall 
+## Variables for stina-palle_ticket.robot and stina-palle_safari.robot
 
 # Timeouts
 standard_timeout = "10s"

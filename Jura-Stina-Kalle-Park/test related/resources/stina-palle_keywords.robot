@@ -1,5 +1,6 @@
 *** Settings ***
-Documentation    [Moa, Grupp 5] Keywords for all tests run in stina-palle_tickets.robot and stina-palle_safari.robot
+Documentation    Keywords for all tests run in stina-palle_tickets.robot and stina-palle_safari.robot
+Test Tags    created_by:MoaRosvall 
 Library    SeleniumLibrary
 
 *** Keywords ***
