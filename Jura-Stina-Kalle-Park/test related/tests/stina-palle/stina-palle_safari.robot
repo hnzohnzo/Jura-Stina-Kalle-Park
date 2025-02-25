@@ -7,7 +7,7 @@ Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_
 Test Teardown    Close Browser
 
 *** Test Cases ***
-3.1, 3.2 Stina-Palle bokar herbivore-safari och T-Rex-safari på en vardag
+3.1, 3.2 Stina-Palle books herbivore safari and T-Rex safari on a weekday
     Maximize Browser Window
     Set Selenium Speed    0.2s
     Wait Until Element Is Visible    ${registration_element} 
@@ -41,7 +41,8 @@ Test Teardown    Close Browser
     Click Button    ${checkout_button}
     Handle Alert
 
-3.3 Stina-Palle försöker boka safari utan biljetter
+3.3 Stina-Palle tries to book a safari without a ticket
+    Maximize Browser Window
     Set Selenium Speed    0.2s
     Wait Until Element Is Visible    ${registration_element} 
     Click Element    ${registration_element}
@@ -59,7 +60,8 @@ Test Teardown    Close Browser
     Click Element    ${add_safaris_to_cart_button}
     Message Should Be Visible    ${safari_error_message_element}    ${safari_no_ticket_text}    ${standard_timeout}
     
-3.4 Stina-Palle försöker boka safari på helgen med standardbiljett
+3.4 Stina-Palle tries to book a safari on a weekend with a regular admission ticket
+    Maximize Browser Window
     Set Selenium Speed    0.2s
     Wait Until Element Is Visible    ${registration_element} 
     Click Element    ${registration_element}

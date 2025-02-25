@@ -8,7 +8,8 @@ Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_
 Test Teardown    Close Browser
 
 *** Test Cases ***
-2.1 Stina-Palle köper en standard vuxenbiljett
+2.1 Stina-Palle buys a regular admission adult ticket
+    Maximize Browser Window
     Set Selenium Speed    0.2s
     Wait Until Element Is Visible    ${registration_element} 
     Click Element    ${registration_element}
@@ -33,6 +34,7 @@ Test Teardown    Close Browser
     Handle Alert
 
 2.2 Stina-Palle försöker köpa biljetter utan att vara inloggad
+    Maximize Browser Window
     Set Selenium Speed    0.2s
     Wait Until Element Is Visible    ${registration_element} 
     Click Element    ${registration_element}
