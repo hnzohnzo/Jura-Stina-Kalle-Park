@@ -1,6 +1,5 @@
 *** Settings ***
-Documentation    All test cases where user 2 is booking safaris
-Test Tags    created_by:MoaRosvall   
+Documentation    [created_by:MoaRosvall] All test cases where user 2 is booking safaris  
 Resource    ../../resources/keywords/stina-palle_keywords.robot
 Variables    ../../resources/variables/stina-palle_variables.py
 Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_jura}
