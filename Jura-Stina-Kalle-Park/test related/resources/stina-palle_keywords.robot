@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Keywords för User 2 Stina-Palle
+Documentation    [Moa] Keywords for all tests run in stina-palle_tickets.robot and stina-palle_safari.robot
 Library    SeleniumLibrary
 
 *** Keywords ***

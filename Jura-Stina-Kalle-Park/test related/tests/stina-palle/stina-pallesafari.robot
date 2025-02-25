@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation    [Moa] All test cases where user 2 is booking safaris
-Resource    ../../resources/common.robot
-Resource    ../../resources/stina-palle.robot
+Resource    ../../resources/stina-palle_keywords.robot
 Variables    ../../resources/variables.py
 Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_jura}
 Test Teardown    Close Browser
