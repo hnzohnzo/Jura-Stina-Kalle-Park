@@ -1,6 +1,5 @@
 *** Settings ***
-Documentation    Keywords for all tests run in stina-palle_tickets.robot and stina-palle_safari.robot
-Test Tags    created_by:MoaRosvall 
+Documentation    [created_by:MoaRosvall] Keywords for all tests run in stina-palle_tickets.robot and stina-palle_safari.robot
 Library    SeleniumLibrary
 
 *** Keywords ***
