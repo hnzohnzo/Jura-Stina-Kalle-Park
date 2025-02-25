@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary 
-Resource  keywords.robot
+Resource  Keywords_Kim.robot
 Test Teardown  Close All Browsers
 
 *** Test Cases ***
