@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Test cases for Stina-Palle registration and login functionality
-Resource    /Users/mac/Jura-Stina-Kalle-Park/Jura-Stina-Kalle-Park/test related/tests/common/stina-palle.robot
+Resource    ../common/stina-palle.robot
 
 Test Setup    Open Browser To Main Page
 Test Teardown     

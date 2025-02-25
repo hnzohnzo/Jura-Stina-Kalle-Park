@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Test cases for Kim registration and login functionality
-Resource    /Users/mac/Jura-Stina-Kalle-Park/Jura-Stina-Kalle-Park/test related/tests/common/kim.robot   
+Resource    ../common/kim.robot   
+#Resource    /Users/mac/Jura-Stina-Kalle-Park/Jura-Stina-Kalle-Park/test related/tests/common/kim.robot   
 Test Setup    Open Browser To Main Page
 Test Teardown    Close All Browsers
 
@@ -16,7 +17,7 @@ Test Teardown    Close All Browsers
     [Documentation]    Kim tries to register with already taken username
     [Tags]    registration    negative    Sumeyye
     
-    # Önce kullanıcıyı oluşturalım
+    
     Navigate To Registration Page
     Fill Registration Form    ${KIM_USERNAME}    ${KIM_PASSWORD}
     Sleep    2s
