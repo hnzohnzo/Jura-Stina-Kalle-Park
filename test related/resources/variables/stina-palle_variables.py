@@ -5,7 +5,6 @@ import os
  
 current_directory = os.getcwd().replace('\\', '/')
 
-
 # Timeouts
 standard_timeout = "10s"
  
