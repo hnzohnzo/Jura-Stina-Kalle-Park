@@ -17,4 +17,9 @@ Type In Quantity
 
 Type In Date
     [Arguments]    ${id_date_element}    ${date}
-    Input Text    ${id_date_element}    ${date}    
+    Input Text    ${id_date_element}    ${date}
+
+Message Should Be Visible
+    [Arguments]    ${error_message_element}    ${error_message_text}    ${timeout}
+    Wait Until Element Is Visible    ${error_message_element}    ${timeout}
+    Element Text Should Be    ${error_message_element}    ${error_message_text}    
