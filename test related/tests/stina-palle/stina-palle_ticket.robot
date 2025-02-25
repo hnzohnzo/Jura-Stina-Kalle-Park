@@ -1,6 +1,5 @@
 *** Settings ***
-Documentation    [Moa, Grupp 5] User 2 (Stina-Palle) buying their ticket.
-Test Tags    created_by:MoaRosvall 
+Documentation    [created_by:MoaRosvall] User 2 (Stina-Palle) buying their ticket.
 Library    SeleniumLibrary
 Resource    ../../resources/keywords/stina-palle_keywords.robot
 Variables    ../../resources/variables/stina-palle_variables.py
