@@ -1,8 +1,6 @@
 *** Settings ***
-Library  SeleniumLibrary 
-Resource  Variables_Kim.robot
-
-
+Library    SeleniumLibrary
+Resource   ../common.robot
 
 *** Keywords ***
 

@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary 
-Resource  Keywords_Kim.robot
+Resource    ../../resources/common.robot
 Test Teardown  Close All Browsers
 
 *** Test Cases ***
