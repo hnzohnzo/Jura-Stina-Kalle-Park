@@ -10,3 +10,11 @@ Type In Wanted Username
 Type In Wanted Password
     [Arguments]    ${id_reg-password_element}    ${password}
     Input Text    ${id_reg-password_element}    ${password}
+
+Type In Quantity
+    [Arguments]    ${id_quantity_element}    ${quantity}
+    Input Text    ${id_quantity_element}    ${quantity}
+
+Type In Date
+    [Arguments]    ${id_date_element}    ${date}
+    Input Text    ${id_date_element}    ${date}    

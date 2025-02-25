@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    User 2 buying their ticket
+Documentation    User 2 (Stina-Palle) buying their ticket. //Moa
 Library    SeleniumLibrary
 Resource    ../../resources/common.robot
 Resource    ../../resources/stina-palle.robot
@@ -8,34 +8,33 @@ Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_
 Test Teardown    Close Browser
 
 *** Test Cases ***
-Buy ticket successful
+2.1 Stina-Palle köper en standard vuxenbiljett
     Set Selenium Speed    0.2s
     Wait Until Element Is Visible    ${registration_element} 
     Click Element    ${registration_element}
     Type In Wanted Username    ${username_registration_id}    ${username}
     Type In Wanted Password    ${password_registration_id}    ${password}
-    Click Button    
+    Click Element    ${register_button}    
+    Sleep    3s    Wait for page to load
+    Type In Wanted Username    ${username_login_id}    ${username}
+    Type In Wanted Password    ${password_login_id}    ${password}
+    Click Element    ${login_button}
+    Sleep    3s    Wait for page to load
+    Click Element    ${buy_tickets_element}
+    Sleep    3s    Wait for page to load
+    Select From List By Value    XPATH=//*[@id="ticket-type"]    Adult
+    Select From List By Value    XPATH=//*[@id="ticket-category"]    Regular
+    Type In Quantity    ${ticket_quantity_element}    ${1}
+    Click Element    ${add_tickets_to_cart_button}
+    Handle Alert
+    Click Element    ${cart_element}
+    Sleep    2s    Wait for page to load
+    Click Button    ${checkout_button}
+    Handle Alert
+                
     
-     
     
-
-Next test
+      
     
-    Click button "Register"
-    -> Login page
-    Type in Registered Username ("Stina-Palle") in field Username
-    Type in Registered Password ("Paleontologen") in field Password
-    Click button "Login"
-    Go to Buy Tickets
-    Set Ticket Type to Adult
-    Set Ticket Category to Regular Ticket
-    Set Quantity to 1
-    Click button "Add to Cart"
-    Verifiera meddelande "Item added to cart!"
-    Click button OK
-    Go to Cart
-    If cart contains 1 Regular Adult ticket
-    and total = $50
-    Click button "Proceed to Checkout"
 
 
