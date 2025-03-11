@@ -1,366 +1,326 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-25T21:37:24.676881" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-03-11T14:49:06.483460" rpa="false" schemaversion="5">
 <suite id="s1" name="Jura-Stina-Kalle" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle">
-<suite id="s1-s1" name="Test Related" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related">
-<suite id="s1-s1-s1" name="Tests" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests">
-<suite id="s1-s1-s1-s1" name="Stina-Palle" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests\stina-palle">
-<suite id="s1-s1-s1-s1-s1" name="Stina-Palle Ticket" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\test related\tests\stina-palle\stina-palle_ticket.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="2.1 Stina-Palle buys a regular admission adult ticket" line="10">
-<kw name="Open Browser To Page" owner="stina-palle_keywords" type="SETUP">
+<suite id="s1-s1" name="Tests" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\tests">
+<suite id="s1-s1-s1" name="Kim" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\tests\kim">
+<suite id="s1-s1-s1-s1" name="Kim Fails To Book Safari Without Date" source="C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\tests\kim\Kim_Fails_To_Book_Safari_Without_Date.robot">
+<test id="s1-s1-s1-s1-t1" name="user attempts to book VIP-Safari tickets without choosing a Date" line="8">
+<kw name="Given the browser is open on the correct URL" owner="Keywords_Kim">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:24.922907" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Hanzoni/Desktop/Jura-Stina-Kalle/website\jurap.html'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<msg time="2025-03-11T14:49:06.767185" level="INFO">Opening browser 'Chrome' to base url 'file:///C:\Users\Hanzoni\Desktop\Jura-Stina-Kalle\resources\variables/../../website/jurap.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-25T21:37:24.922569" elapsed="1.407563"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:26.335276" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
-<arg>${title}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-02-25T21:37:26.330461" elapsed="0.005248"/>
-</kw>
-<arg>${url_jura}</arg>
-<arg>${browser_jura}</arg>
-<arg>${title_jura}</arg>
-<status status="PASS" start="2025-02-25T21:37:24.921672" elapsed="1.414275"/>
+<status status="PASS" start="2025-03-11T14:49:06.766821" elapsed="1.363934"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-25T21:37:26.336367" elapsed="0.020338"/>
+<status status="PASS" start="2025-03-11T14:49:08.131142" elapsed="0.019825"/>
 </kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>0.2s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-25T21:37:26.357183" elapsed="0.000592"/>
+<tag>created_by:HannesSchönberg</tag>
+<doc>Browser opens, the correct URL loads, Browser window set to maximum, Selenium speed set to 0.2s.</doc>
+<status status="PASS" start="2025-03-11T14:49:06.764673" elapsed="1.386545"/>
+</kw>
+<kw name="When the user registers a new account" owner="Keywords_Kim">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=register-nav</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-11T14:49:08.155187" elapsed="0.017517"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:08.173453" level="INFO">Clicking element 'id=register-nav'.</msg>
+<arg>id=register-nav</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:08.173026" elapsed="0.052262"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${registration_element}</arg>
+<arg>id=register-section</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:37:26.358066" elapsed="0.420209"/>
+<status status="PASS" start="2025-03-11T14:49:08.225552" elapsed="0.015466"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:08.241683" level="INFO">Typing text 'KimUsername' into text field 'id=reg-username'.</msg>
+<arg>id=reg-username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:08.241271" elapsed="0.080584"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:08.322680" level="INFO">Typing text 'KimPassword123' into text field 'id=reg-password'.</msg>
+<arg>id=reg-password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:08.322188" elapsed="0.081350"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:26.779129" level="INFO">Clicking element 'XPATH=/html/body/header/div/nav/ul/li[2]/a'.</msg>
-<arg>${registration_element}</arg>
+<msg time="2025-03-11T14:49:08.404358" level="INFO">Clicking element 'xpath=//form[@id='register-form']//button[@type='submit']'.</msg>
+<arg>xpath=//form[@id='register-form']//button[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:26.778677" elapsed="0.454028"/>
-</kw>
-<kw name="Type In Wanted Username" owner="stina-palle_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:27.234062" level="INFO">Typing text 'Stina-Palle' into text field 'id=reg-username'.</msg>
-<arg>${id_reg-username_element}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:27.233751" elapsed="0.668601"/>
-</kw>
-<arg>${username_registration_id}</arg>
-<arg>${username}</arg>
-<status status="PASS" start="2025-02-25T21:37:27.233177" elapsed="0.669414"/>
-</kw>
-<kw name="Type In Wanted Password" owner="stina-palle_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:27.903958" level="INFO">Typing text 'Paleontologen' into text field 'id=reg-password'.</msg>
-<arg>${id_reg-password_element}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:27.903651" elapsed="0.662249"/>
-</kw>
-<arg>${password_registration_id}</arg>
-<arg>${password}</arg>
-<status status="PASS" start="2025-02-25T21:37:27.903043" elapsed="0.663074"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:28.566821" level="INFO">Clicking element 'XPATH=//*[@id='register-form']/button'.</msg>
-<arg>${register_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:28.566396" elapsed="0.442947"/>
+<status status="PASS" start="2025-03-11T14:49:08.403819" elapsed="0.046349"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T21:37:32.010697" level="INFO">Slept 3 seconds.</msg>
-<msg time="2025-02-25T21:37:32.011045" level="INFO">Wait for page to load</msg>
-<arg>3s</arg>
-<arg>Wait for page to load</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T21:37:29.009756" elapsed="3.001556"/>
-</kw>
-<kw name="Type In Wanted Username" owner="stina-palle_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:32.012737" level="INFO">Typing text 'Stina-Palle' into text field 'id=login-username'.</msg>
-<arg>${id_reg-username_element}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:32.012396" elapsed="0.657987"/>
-</kw>
-<arg>${username_login_id}</arg>
-<arg>${username}</arg>
-<status status="PASS" start="2025-02-25T21:37:32.011877" elapsed="0.658728"/>
-</kw>
-<kw name="Type In Wanted Password" owner="stina-palle_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:32.671792" level="INFO">Typing text 'Paleontologen' into text field 'id=login-password'.</msg>
-<arg>${id_reg-password_element}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:32.671471" elapsed="0.658131"/>
-</kw>
-<arg>${password_login_id}</arg>
-<arg>${password}</arg>
-<status status="PASS" start="2025-02-25T21:37:32.670931" elapsed="0.658989"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:33.330709" level="INFO">Clicking element 'XPATH=//*[@id='login-form']/button'.</msg>
-<arg>${login_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:33.330279" elapsed="0.440213"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T21:37:36.771396" level="INFO">Slept 3 seconds.</msg>
-<msg time="2025-02-25T21:37:36.771736" level="INFO">Wait for page to load</msg>
-<arg>3s</arg>
-<arg>Wait for page to load</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T21:37:33.770876" elapsed="3.001040"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:36.772675" level="INFO">Clicking element 'XPATH=//*[@id='tickets-nav']/a'.</msg>
-<arg>${buy_tickets_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:36.772303" elapsed="0.445094"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T21:37:40.218486" level="INFO">Slept 3 seconds.</msg>
-<msg time="2025-02-25T21:37:40.218824" level="INFO">Wait for page to load</msg>
-<arg>3s</arg>
-<arg>Wait for page to load</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T21:37:37.217780" elapsed="3.001287"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:40.219848" level="INFO">Selecting options from selection list 'XPATH=//*[@id="ticket-type"]' by value Adult.</msg>
-<arg>XPATH=//*[@id="ticket-type"]</arg>
-<arg>Adult</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-25T21:37:40.219459" elapsed="1.237593"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:41.457782" level="INFO">Selecting options from selection list 'XPATH=//*[@id="ticket-category"]' by value Regular.</msg>
-<arg>XPATH=//*[@id="ticket-category"]</arg>
-<arg>Regular</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-25T21:37:41.457418" elapsed="1.235361"/>
-</kw>
-<kw name="Type In Quantity" owner="stina-palle_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:42.694589" level="INFO">Typing text '1' into text field 'XPATH=//*[@id='ticket-quantity']'.</msg>
-<arg>${id_quantity_element}</arg>
-<arg>${quantity}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:42.694255" elapsed="0.650194"/>
-</kw>
-<arg>${ticket_quantity_element}</arg>
-<arg>${1}</arg>
-<status status="PASS" start="2025-02-25T21:37:42.693476" elapsed="0.651235"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:43.345437" level="INFO">Clicking element 'XPATH=//*[@id='ticket-form']/button'.</msg>
-<arg>${add_tickets_to_cart_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:43.345022" elapsed="0.452379"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:43.798056" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-25T21:37:43.797772" elapsed="0.606245"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:44.404871" level="INFO">Clicking element 'XPATH=//*[@id='cart-nav']/a'.</msg>
-<arg>${cart_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:44.404420" elapsed="0.448037"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T21:37:46.853730" level="INFO">Slept 2 seconds.</msg>
-<msg time="2025-02-25T21:37:46.854092" level="INFO">Wait for page to load</msg>
+<msg time="2025-03-11T14:49:10.451372" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
-<arg>Wait for page to load</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T21:37:44.852856" elapsed="2.001509"/>
+<status status="PASS" start="2025-03-11T14:49:08.450442" elapsed="2.001360"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:46.855269" level="INFO">Clicking button 'id=checkout-button'.</msg>
-<arg>${checkout_button}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:46.854816" elapsed="1.075539"/>
+<tag>created_by:HannesSchönberg</tag>
+<doc>The user successfully registers a new account with valid credentials.</doc>
+<status status="PASS" start="2025-03-11T14:49:08.153064" elapsed="2.299057"/>
 </kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:47.931185" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-25T21:37:47.930808" elapsed="0.606170"/>
+<kw name="And the user logs in with the new account" owner="Keywords_Kim">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login-nav</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-11T14:49:10.456941" elapsed="0.013337"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-25T21:37:48.537481" elapsed="2.282017"/>
-</kw>
-<status status="PASS" start="2025-02-25T21:37:24.920751" elapsed="25.899171"/>
-</test>
-<test id="s1-s1-s1-s1-s1-t2" name="2.2 Stina-Palle försöker köpa biljetter utan att vara inloggad" line="35">
-<kw name="Open Browser To Page" owner="stina-palle_keywords" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:50.822564" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Hanzoni/Desktop/Jura-Stina-Kalle/website\jurap.html'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-25T21:37:50.822214" elapsed="1.613073"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:52.641570" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
-<arg>${title}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-02-25T21:37:52.435570" elapsed="0.206413"/>
-</kw>
-<arg>${url_jura}</arg>
-<arg>${browser_jura}</arg>
-<arg>${title_jura}</arg>
-<status status="PASS" start="2025-02-25T21:37:50.821701" elapsed="1.820455"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-25T21:37:52.642515" elapsed="0.221158"/>
-</kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>0.2s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-25T21:37:52.864058" elapsed="0.000451"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:10.470914" level="INFO">Clicking element 'id=login-nav'.</msg>
+<arg>id=login-nav</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:10.470520" elapsed="0.037967"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${registration_element}</arg>
+<arg>id=login-section</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T21:37:52.864736" elapsed="0.418375"/>
+<status status="PASS" start="2025-03-11T14:49:10.508733" elapsed="0.011978"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:53.284032" level="INFO">Clicking element 'XPATH=/html/body/header/div/nav/ul/li[2]/a'.</msg>
-<arg>${registration_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:53.283522" elapsed="0.459510"/>
-</kw>
-<kw name="Type In Wanted Username" owner="stina-palle_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:53.744527" level="INFO">Typing text 'Stina-Palle' into text field 'id=reg-username'.</msg>
-<arg>${id_reg-username_element}</arg>
-<arg>${username}</arg>
+<msg time="2025-03-11T14:49:10.521374" level="INFO">Typing text 'KimUsername' into text field 'id=login-username'.</msg>
+<arg>id=login-username</arg>
+<arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:53.744037" elapsed="0.672958"/>
+<status status="PASS" start="2025-03-11T14:49:10.520950" elapsed="0.063483"/>
 </kw>
-<arg>${username_registration_id}</arg>
-<arg>${username}</arg>
-<status status="PASS" start="2025-02-25T21:37:53.743466" elapsed="0.673749"/>
-</kw>
-<kw name="Type In Wanted Password" owner="stina-palle_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:54.418697" level="INFO">Typing text 'Paleontologen' into text field 'id=reg-password'.</msg>
-<arg>${id_reg-password_element}</arg>
-<arg>${password}</arg>
+<msg time="2025-03-11T14:49:10.585271" level="INFO">Typing text 'KimPassword123' into text field 'id=login-password'.</msg>
+<arg>id=login-password</arg>
+<arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:54.418120" elapsed="0.665018"/>
-</kw>
-<arg>${password_registration_id}</arg>
-<arg>${password}</arg>
-<status status="PASS" start="2025-02-25T21:37:54.417557" elapsed="0.665801"/>
+<status status="PASS" start="2025-03-11T14:49:10.584794" elapsed="0.057859"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:55.084088" level="INFO">Clicking element 'XPATH=//*[@id='register-form']/button'.</msg>
-<arg>${register_button}</arg>
+<msg time="2025-03-11T14:49:10.643352" level="INFO">Clicking element 'xpath=//form[@id='login-form']//button[@type='submit']'.</msg>
+<arg>xpath=//form[@id='login-form']//button[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:55.083659" elapsed="0.444967"/>
+<status status="PASS" start="2025-03-11T14:49:10.642907" elapsed="0.042819"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T21:37:58.529510" level="INFO">Slept 3 seconds.</msg>
-<msg time="2025-02-25T21:37:58.529853" level="INFO">Wait for page to load</msg>
-<arg>3s</arg>
-<arg>Wait for page to load</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T21:37:55.529014" elapsed="3.001093"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=logout-nav</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-11T14:49:10.685974" elapsed="2.122865"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:12.820244" level="INFO">Element 'id=cart-nav' is displayed.</msg>
+<arg>id=cart-nav</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-11T14:49:12.809069" elapsed="0.011532"/>
+</kw>
+<tag>created_by:HannesSchönberg</tag>
+<doc>The user successfully login with new account</doc>
+<status status="PASS" start="2025-03-11T14:49:10.454495" elapsed="2.366261"/>
+</kw>
+<kw name="And the user Navigates to 'Buy Tickets'" owner="Keywords_Kim">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tickets-nav</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-11T14:49:12.824936" elapsed="0.011462"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:37:58.531054" level="INFO">Clicking element 'XPATH=//*[@id='tickets-nav']/a'.</msg>
-<arg>${buy_tickets_element}</arg>
+<msg time="2025-03-11T14:49:12.837116" level="INFO">Clicking element 'id=tickets-nav'.</msg>
+<arg>id=tickets-nav</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:37:58.530632" elapsed="0.445373"/>
+<status status="PASS" start="2025-03-11T14:49:12.836674" elapsed="0.038878"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T21:38:01.977041" level="INFO">Slept 3 seconds.</msg>
-<msg time="2025-02-25T21:38:01.977375" level="INFO">Wait for page to load</msg>
-<arg>3s</arg>
-<arg>Wait for page to load</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T21:37:58.976390" elapsed="3.001140"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tickets-section</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-11T14:49:12.875810" elapsed="0.013806"/>
 </kw>
+<tag>created_by:HannesSchönberg</tag>
+<doc>The user navigate and clicks on 'Buy Tickets'</doc>
+<status status="PASS" start="2025-03-11T14:49:12.822658" elapsed="0.067145"/>
+</kw>
+<kw name="And the user adds two Adult VIP tickets to Cart" owner="Keywords_Kim">
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:38:01.978322" level="INFO">Selecting options from selection list 'XPATH=//*[@id="ticket-type"]' by value Adult.</msg>
-<arg>XPATH=//*[@id="ticket-type"]</arg>
+<msg time="2025-03-11T14:49:12.894501" level="INFO">Selecting options from selection list 'id=ticket-type' by value Adult.</msg>
+<arg>id=ticket-type</arg>
 <arg>Adult</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-25T21:38:01.977891" elapsed="1.239426"/>
+<status status="PASS" start="2025-03-11T14:49:12.894013" elapsed="0.042567"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:38:03.218251" level="INFO">Selecting options from selection list 'XPATH=//*[@id="ticket-category"]' by value Regular.</msg>
-<arg>XPATH=//*[@id="ticket-category"]</arg>
-<arg>Regular</arg>
+<msg time="2025-03-11T14:49:12.937338" level="INFO">Selecting options from selection list 'id=ticket-category' by value VIP.</msg>
+<arg>id=ticket-category</arg>
+<arg>VIP</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-02-25T21:38:03.217837" elapsed="1.234226"/>
+<status status="PASS" start="2025-03-11T14:49:12.936828" elapsed="0.046702"/>
 </kw>
-<kw name="Type In Quantity" owner="stina-palle_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:38:04.453808" level="INFO">Typing text '1' into text field 'XPATH=//*[@id='ticket-quantity']'.</msg>
-<arg>${id_quantity_element}</arg>
-<arg>${quantity}</arg>
+<msg time="2025-03-11T14:49:12.984289" level="INFO">Typing text '2' into text field 'id=ticket-quantity'.</msg>
+<arg>id=ticket-quantity</arg>
+<arg>2</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:38:04.453429" elapsed="0.648864"/>
-</kw>
-<arg>${ticket_quantity_element}</arg>
-<arg>${1}</arg>
-<status status="PASS" start="2025-02-25T21:38:04.452525" elapsed="0.650065"/>
+<status status="PASS" start="2025-03-11T14:49:12.983863" elapsed="0.049328"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:38:05.103376" level="INFO">Clicking element 'XPATH=//*[@id='ticket-form']/button'.</msg>
-<arg>${add_tickets_to_cart_button}</arg>
+<msg time="2025-03-11T14:49:13.033871" level="INFO">Clicking element 'xpath=//form[@id='ticket-form']//button[@type='submit']'.</msg>
+<arg>xpath=//form[@id='ticket-form']//button[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T21:38:05.102902" elapsed="0.447755"/>
+<status status="PASS" start="2025-03-11T14:49:13.033491" elapsed="0.044210"/>
 </kw>
 <kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-25T21:38:05.551446" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-03-11T14:49:13.078346" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
 <doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-25T21:38:05.551086" elapsed="0.606630"/>
+<status status="PASS" start="2025-03-11T14:49:13.077951" elapsed="0.005304"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-25T21:38:06.158211" elapsed="2.248827"/>
+<tag>created_by:HannesSchönberg</tag>
+<doc>The user successfully adds two Adult VIP-Tickets to cart</doc>
+<status status="PASS" start="2025-03-11T14:49:12.891709" elapsed="0.191774"/>
 </kw>
-<status status="PASS" start="2025-02-25T21:37:50.820912" elapsed="17.586780"/>
+<kw name="And the user adds two Children VIP tickets to Cart" owner="Keywords_Kim">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:13.088270" level="INFO">Selecting options from selection list 'id=ticket-type' by value Child.</msg>
+<arg>id=ticket-type</arg>
+<arg>Child</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.087823" elapsed="0.043579"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:13.132106" level="INFO">Selecting options from selection list 'id=ticket-category' by value VIP.</msg>
+<arg>id=ticket-category</arg>
+<arg>VIP</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.131725" elapsed="0.049846"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:13.182359" level="INFO">Typing text '2' into text field 'id=ticket-quantity'.</msg>
+<arg>id=ticket-quantity</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.181814" elapsed="0.058756"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:13.241491" level="INFO">Clicking element 'xpath=//form[@id='ticket-form']//button[@type='submit']'.</msg>
+<arg>xpath=//form[@id='ticket-form']//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.240969" elapsed="0.039969"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:13.281505" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.281175" elapsed="0.005574"/>
+</kw>
+<tag>created_by:HannesSchönberg</tag>
+<doc>The user successfully adds two Children VIP-Tickets to cart</doc>
+<status status="PASS" start="2025-03-11T14:49:13.085799" elapsed="0.201126"/>
+</kw>
+<kw name="And the user navigates to &quot;Book Safaris&quot;" owner="Keywords_Kim">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=safari-nav</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.291273" elapsed="0.014416"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:13.306331" level="INFO">Clicking element 'id=safari-nav'.</msg>
+<arg>id=safari-nav</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.305945" elapsed="0.042975"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=safari-section</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.349154" elapsed="0.011697"/>
+</kw>
+<tag>created_by:HannesSchönberg</tag>
+<doc>The user navigate and clicks on 'Book Safaris'</doc>
+<status status="PASS" start="2025-03-11T14:49:13.288785" elapsed="0.072235"/>
+</kw>
+<kw name="And the user tries to confirm the booking without selecting a date" owner="Keywords_Kim">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:13.365321" level="INFO">Selecting options from selection list 'id=safari-type' by label T-Rex Rumble eXtreme Thrill Pack.</msg>
+<arg>id=safari-type</arg>
+<arg>${SAFARI_TYPE}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.364894" elapsed="0.043639"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:13.409180" level="INFO">Clicking element 'xpath=//form[@id='safari-form']//button[@type='submit']'.</msg>
+<arg>xpath=//form[@id='safari-form']//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.408786" elapsed="0.049545"/>
+</kw>
+<tag>created_by:HannesSchönberg</tag>
+<doc>The user attempts to confirm the Safari booking without selecting a date.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.363288" elapsed="0.095241"/>
+</kw>
+<kw name="Then an error message should be displayed" owner="Keywords_Kim">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:13.462052" level="INFO">Clicking element 'xpath=//form[@id='safari-form']//button[@type='submit']'.</msg>
+<arg>xpath=//form[@id='safari-form']//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.461768" elapsed="0.038732"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-11T14:49:14.501204" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.500746" elapsed="1.000887"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:14.502504" level="INFO">Executing JavaScript:
+return document.getElementById('safari-date').validationMessage;
+Without any arguments.</msg>
+<msg time="2025-03-11T14:49:14.507090" level="INFO">${error_message} = Fyll i det här fältet.</msg>
+<var>${error_message}</var>
+<arg>return document.getElementById('safari-date').validationMessage;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-11T14:49:14.501881" elapsed="0.005477"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${error_message}</arg>
+<arg>Fyll i det här fältet.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-03-11T14:49:14.507577" elapsed="0.000449"/>
+</kw>
+<tag>created_by:HannesSchönberg</tag>
+<doc>The System checks if the browser displays the required field error message.</doc>
+<status status="PASS" start="2025-03-11T14:49:13.460011" elapsed="1.048145"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-03-11T14:49:14.510417" elapsed="2.121290"/>
+</kw>
+<doc>Scenario: Kim attempts to book VIP-Safari tickets without choosing a Date</doc>
+<tag>created_by:HannesSchönberg</tag>
+<tag>functionality:VIP-Safari_tickets_purchase</tag>
+<tag>status:Approved</tag>
+<tag>type:negative</tag>
+<status status="PASS" start="2025-03-11T14:49:06.763331" elapsed="9.868883"/>
 </test>
-<doc>[created_by:MoaRosvall] User 2 (Stina-Palle) buying their ticket.</doc>
-<status status="PASS" start="2025-02-25T21:37:24.703895" elapsed="43.704874"/>
+<status status="PASS" start="2025-03-11T14:49:06.510984" elapsed="10.122517"/>
 </suite>
-<status status="PASS" start="2025-02-25T21:37:24.702400" elapsed="43.707726"/>
+<status status="PASS" start="2025-03-11T14:49:06.509035" elapsed="10.125991"/>
 </suite>
-<status status="PASS" start="2025-02-25T21:37:24.700837" elapsed="43.710371"/>
+<status status="PASS" start="2025-03-11T14:49:06.507032" elapsed="10.129045"/>
 </suite>
-<status status="PASS" start="2025-02-25T21:37:24.699087" elapsed="43.713150"/>
-</suite>
-<status status="PASS" start="2025-02-25T21:37:24.681204" elapsed="43.732264"/>
+<status status="PASS" start="2025-03-11T14:49:06.487708" elapsed="10.149382"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">created_by:HannesSchönberg</stat>
+<stat pass="1" fail="0" skip="0">functionality:VIP-Safari_tickets_purchase</stat>
+<stat pass="1" fail="0" skip="0">status:Approved</stat>
+<stat pass="1" fail="0" skip="0">type:negative</stat>
 </tag>
 <suite>
-<stat name="Jura-Stina-Kalle" id="s1" pass="2" fail="0" skip="0">Jura-Stina-Kalle</stat>
-<stat name="Test Related" id="s1-s1" pass="2" fail="0" skip="0">Jura-Stina-Kalle.Test Related</stat>
-<stat name="Tests" id="s1-s1-s1" pass="2" fail="0" skip="0">Jura-Stina-Kalle.Test Related.Tests</stat>
-<stat name="Stina-Palle" id="s1-s1-s1-s1" pass="2" fail="0" skip="0">Jura-Stina-Kalle.Test Related.Tests.Stina-Palle</stat>
-<stat name="Stina-Palle Ticket" id="s1-s1-s1-s1-s1" pass="2" fail="0" skip="0">Jura-Stina-Kalle.Test Related.Tests.Stina-Palle.Stina-Palle Ticket</stat>
+<stat name="Jura-Stina-Kalle" id="s1" pass="1" fail="0" skip="0">Jura-Stina-Kalle</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Jura-Stina-Kalle.Tests</stat>
+<stat name="Kim" id="s1-s1-s1" pass="1" fail="0" skip="0">Jura-Stina-Kalle.Tests.Kim</stat>
+<stat name="Kim Fails To Book Safari Without Date" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Jura-Stina-Kalle.Tests.Kim.Kim Fails To Book Safari Without Date</stat>
 </suite>
 </statistics>
 <errors>
