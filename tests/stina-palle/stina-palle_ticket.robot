@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    [created_by:MoaRosvall] User 2 (Stina-Palle) buying their ticket.
 Library    SeleniumLibrary
-Resource    ../../resources/keywords/stina-palle_keywords.robot
+Resource    ../../resources/keyword/stina-palle_keywords.robot
 Variables    ../../resources/variables/stina-palle_variables.py
 Test Setup    Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_jura}
 Test Teardown    Close Browser
