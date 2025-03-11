@@ -1,5 +1,6 @@
 *** Settings ***
-Resource    common.robot
+Resource    ./keyword_files/Keywords_Kim.robot
+Resource    ./variables/Variables_Kim.robot
 
 *** Variables ***
 ${KIM_USERNAME}    KimAndFamily
