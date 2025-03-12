@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation    Common test cases for registration and login functionality
-Resource    ./Users/mac/Jura-Stina-Kalle-Park/resources/keyword_files/common_keywords.robot
-Resource    ../resources/variables/common_variables.robot
+Resource    ${EXECDIR}/resources/keyword_files/common_keywords.robot
 Test Setup    Open Browser To Main Page
 Test Teardown    Close All Browsers
 
@@ -23,7 +22,7 @@ Test Teardown    Close All Browsers
     
     # Try to register again with the same username
     Navigate To Registration Page  
-    Fill Registration Form    ${KIM_USERNAME}    ${WRONG_PASSWORD}
+    Fill Registration Form    ${KIM_USERNAME}    ${KIM_WRONG_PASSWORD}
     Wait Until Page Contains    Username already exists. Please choose another    timeout=10s
 
 1.3 - Kim Registration With Short Password
