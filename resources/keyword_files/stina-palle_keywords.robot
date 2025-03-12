@@ -1,8 +1,13 @@
 *** Settings ***
 Documentation    [created_by:MoaRosvall] Keywords for all tests run in stina-palle_tickets.robot and stina-palle_safari.robot
 Library    SeleniumLibrary
+Resource    ${EXECDIR}/resources/variables/stina-palle_variables.robot
 
 *** Keywords ***
+Open Browser and go swoosh
+    Open Browser To Page    ${url_jura}
+
+
 Open Browser To Page
     [Arguments]    ${url}    ${browser}    ${title}
     Open Browser    ${url}    ${browser}
