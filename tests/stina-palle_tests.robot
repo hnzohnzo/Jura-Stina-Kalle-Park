@@ -6,6 +6,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 2.1 Stina-Palle buys a regular admission adult ticket
+    [Tags]    stina-palle-ticket
     Given the user is logged into the system
     and has put a regular admission ticket in their cart
     When the user goes to view their cart
@@ -13,12 +14,14 @@ Test Teardown    Close Browser
     Then the user can check out
     
 2.2 Stina-Palle tries to buy a ticket without logging in
+    [Tags]    stina-palle-ticket
     Given the user goes to buy a ticket without logging in
     When the user tries to add the ticket to their cart
     Then an error alert pops up
     #is there another assertion to make here?
 
 3.1, 3.2 Stina-Palle books herbivore safari and T-Rex safari on a weekday
+    [Tags]    stina-palle-safari
     Given the user is logged into the system
     and has put a regular admission ticket in their cart
     When the user books their safaris on a weekday
@@ -28,11 +31,13 @@ Test Teardown    Close Browser
     #and the user can check out
 
 3.3 Stina-Palle tries to book a safari without a ticket
+    [Tags]    stina-palle-safari
     Given the user is logged into the system
     When the user books their safari without a ticket
     Then an error message is visible, telling the user to get a ticket
 
 3.4 Stina-Palle tries to book a safari on a weekend with a regular admission ticket
+    [Tags]    stina-palle-safari
     Given the user is logged into the system
     and has put a regular admission ticket in their cart
     When the user books their safari on a weekend
