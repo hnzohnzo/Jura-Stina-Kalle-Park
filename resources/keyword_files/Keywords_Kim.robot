@@ -157,7 +157,7 @@ the user Adds Multiple Safaris to Cart
     Wait Until Element Is Visible         id=safari-section
 
     FOR    ${i}    IN RANGE    ${quantity}
-        Input Text                        id=safari-date    ${EXPECTED_DATE} 
+        Input Text                        id=safari-date    ${SAFARI_DATE} 
         Select From List By Label         id=safari-type    ${SAFARI_TYPE}
         Click Element                     xpath=//form[@id='safari-form']//button[@type='submit']
         Handle Alert                      action=ACCEPT    timeout=5s 
