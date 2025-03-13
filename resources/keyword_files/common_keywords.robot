@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    /Users/mac/Jura-Stina-Kalle-Park/resources/common_variables.robot
+Resource    ${EXECDIR}/resources/variables/common_variables.robot
 
 *** Keywords ***
 # Ortak Keywords - common.robot'dan

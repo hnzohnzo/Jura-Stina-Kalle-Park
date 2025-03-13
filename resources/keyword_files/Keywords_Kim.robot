@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ./variables/Variables_Kim.robot
+Resource    ${EXECDIR}/resources/variables/Variables_Kim.robot
 
 *** Keywords ***
 
