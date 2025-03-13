@@ -8,6 +8,7 @@ ${BROWSER}          headlesschrome
 ${USERNAME}         KimUsername
 ${PASSWORD}         KimPassword123
 ${SAFARI_TYPE}      T-Rex Rumble eXtreme Thrill Pack
+${EXPECTED_DATE}    06-28-2025
 ${SAFARI_DATE}      2025-06-28
 ${SAFARI_QUANTITY}  4
 ${alert_text}  
