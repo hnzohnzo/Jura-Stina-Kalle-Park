@@ -206,7 +206,7 @@ an error message should be displayed
     Sleep                                 1s 
 
     ${error_message}=  Execute JavaScript  return document.getElementById('safari-date').validationMessage;
-    Should Be Equal As Strings  ${error_message}    Fyll i det här fältet.
+    Should Be Equal As Strings  ${error_message}    Please fill out this field.
 
 # # # 
 

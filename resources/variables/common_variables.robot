@@ -2,7 +2,7 @@
 #
 *** Variables ***
 # Common variables from common.robot
-${BROWSER}           chrome
+${BROWSER}           headlesschrome
 ${URL}               file://${EXECDIR}/website/jurap.html
 ${TIMEOUT}           10s
 
