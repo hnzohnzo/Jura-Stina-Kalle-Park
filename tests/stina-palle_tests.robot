@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    [created_by:MoaRosvall] All test cases where user 2 (Stina-Palle) buys tickets and books safaris
 Resource    ${EXECDIR}/resources/keyword_files/stina-palle_keywords.robot
+Resource    ${EXECDIR}/resources/variables/stina-palle_variables.robot
 Test Setup    Open Browser and Register User
 Test Teardown    Close Browser
 
