@@ -1,7 +1,10 @@
-*** Settings ***
+***Settings*** 
 Library    SeleniumLibrary
 Resource    ${EXECDIR}/resources/variables/Variables_Kim.robot
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 *** Keywords ***
 
 the browser is open on the correct URL
