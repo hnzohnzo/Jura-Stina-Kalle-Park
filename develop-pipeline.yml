@@ -9,12 +9,12 @@ steps:
 
   # Scripts for running all tests in a file and to run tests based on test case name (integration testing)
   - script: |
-      robot --output results/logs/output_kim_test.xml --log results/logs/log_kim_test.html --report results/logs/report_kim_test.html tests/kim.robot
-    displayName: 'Run Test File "Kim"'
+      robot --output results/logs/output_kim_tests.xml --log results/logs/log_kim_tests.html --report results/logs/report_kim_tests.html tests/kim_tests.robot
+    displayName: 'Run Test File "kim_tests"'
 
   - script: |
-      robot --test "Buying Safari Tickets For The Family" --output results/logs/output_kim_test_safari.xml --log results/logs/log_kim_test_safari.html --report results/logs/report_kim_test_safari.html tests/
-    displayName: 'Run Specific Tests'
+      robot --test "user successfully buys VIP-Tickets for the whole family" --output results/logs/output_kim_family_tickets.xml --log results/logs/log_kim_family_tickets.html --report results/logs/report_kim_family_tickets.html tests/kim_tests.robot
+    displayName: 'Run Specific Test Case "user successfully buys VIP-Tickets for the whole family" (Kim Tests)
 
   # Publish the Robot Framework reports as pipeline artifacts.
   - task: PublishPipelineArtifact@1
