@@ -157,7 +157,7 @@ the user Adds Multiple Safaris to Cart
     Wait Until Element Is Visible         id=safari-section
 
     FOR    ${i}    IN RANGE    ${quantity}
-        Input Text                        id=safari-date    ${SAFARI_DATE} 
+        Input Text                        id=safari-date    ${EXPECTED_DATE} 
         Select From List By Label         id=safari-type    ${SAFARI_TYPE}
         Click Element                     xpath=//form[@id='safari-form']//button[@type='submit']
         Handle Alert                      action=ACCEPT    timeout=5s 
@@ -177,10 +177,11 @@ the user Proceeds to Checkout, Then the Checkout Summary is Shown
     Wait Until Element Is Enabled         id=checkout-button
     Click Element                         id=checkout-button
     Sleep                                 2s
+    Log To Console                        ${EXPECTED_DATE}
     ${checkout_summary}=    Handle Alert  timeout=10s
     Should Contain   ${checkout_summary}  2 VIP Adult Ticket(s) - $200
     Should Contain   ${checkout_summary}  2 VIP Child Ticket(s) - $120
-    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on ${EXPECTED_DATE} - $220
+    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on 2025-06-28 - $220
     Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on ${EXPECTED_DATE} - $220
     Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on ${EXPECTED_DATE} - $220
     Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on ${EXPECTED_DATE} - $220
