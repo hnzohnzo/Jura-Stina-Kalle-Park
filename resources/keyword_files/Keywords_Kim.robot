@@ -177,13 +177,9 @@ the user Proceeds to Checkout, Then the Checkout Summary is Shown
     Wait Until Element Is Enabled         id=checkout-button
     Click Element                         id=checkout-button
     Sleep                                 2s
-    Log To Console                        ${EXPECTED_DATE}
     ${checkout_summary}=    Handle Alert  timeout=10s
     Should Contain   ${checkout_summary}  2 VIP Adult Ticket(s) - $200
     Should Contain   ${checkout_summary}  2 VIP Child Ticket(s) - $120
-    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on 2025-06-28 - $220
-    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on ${EXPECTED_DATE} - $220
-    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on ${EXPECTED_DATE} - $220
     Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on ${EXPECTED_DATE} - $220
     Should Contain   ${checkout_summary}  Total: $1200
     Sleep                                 3s
