@@ -8,6 +8,7 @@ Test Teardown    Close All Browsers
 1.1 - Kim Successful Registration
     [Documentation]    Kim successfully registers an account
     [Tags]    registration    positive    kim    created_by:sumeyyesaglam    new-feature
+    
     Given Navigate To Registration Page
     When Fill Registration Form    ${KIM_USERNAME}    ${KIM_PASSWORD}
     Then Page Should Contain    Registration successful
