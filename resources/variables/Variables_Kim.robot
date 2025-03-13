@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${URL}              file:///${EXECDIR}/website/jurap.html
-${BROWSER}          Chrome
+${BROWSER}          headlesschrome
 ${USERNAME}         KimUsername
 ${PASSWORD}         KimPassword123
 ${SAFARI_TYPE}      T-Rex Rumble eXtreme Thrill Pack
