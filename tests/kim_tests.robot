@@ -9,7 +9,7 @@ Test Teardown  Close All Browsers
 user successfully purchases VIP-Safari tickets on a weekend
 
   [Documentation]  Scenario: Kim successfully purchases VIP-Safari tickets on a weekend
-  [Tags]  created_by:HannesSchönberg  functionality:VIP-Safari_tickets_purchase  status:Approved  type:positive
+  [Tags]  HannesSchonberg    new-feature
 
   Given the browser is open on the correct URL
   When the user registers a new account
@@ -26,7 +26,7 @@ user successfully purchases VIP-Safari tickets on a weekend
 user attempts to book VIP-Safari tickets without choosing a Date
 
   [Documentation]  Scenario: Kim attempts to book VIP-Safari tickets without choosing a Date
-  [Tags]  created_by:HannesSchönberg  functionality:VIP-Safari_tickets_purchase  status:Approved  type:negative
+  [Tags]  HannesSchonberg    new-feature
 
   Given the browser is open on the correct URL
   When the user registers a new account
@@ -44,7 +44,7 @@ user attempts to book VIP-Safari tickets without choosing a Date
 user attempts to buy VIP-Safari tickets without VIP-Access
 
   [Documentation]  Scenario: Kim attempts to buy VIP-Safari tickets without VIP-Access
-  [Tags]  created_by:HannesSchönberg  functionality:VIP-Safari_tickets_purchase  status:Approved  type:negative
+  [Tags]  HannesSchonberg    new-feature
 
   Given the browser is open on the correct URL
   When the user registers a new account
@@ -58,7 +58,7 @@ user attempts to buy VIP-Safari tickets without VIP-Access
 user attempts to buy VIP-Tickets without login
 
   [Documentation]  Scenario: Kim attempts to buy VIP-Tickets without login
-  [Tags]  created_by:HannesSchönberg  functionality:VIP-tickets_purchase  status:Approved  type:negative
+  [Tags]  HannesSchonberg    new-feature
 
   Given the browser is open on the correct URL
   And the user navigates to 'Buy Tickets'
@@ -71,7 +71,7 @@ user attempts to buy VIP-Tickets without login
 user successfully buys VIP-Tickets for the whole family
 
   [Documentation]  Kim successfully buys VIP-Tickets for her whole family on a weekend. 
-  [Tags]  created_by:HannesSchönberg  functionality:VIP-tickets_purchase  status:Approved  type:positive
+  [Tags]  HannesSchonberg   new-feature
 
   Given the browser is open on the correct URL
   When the user registers a new account

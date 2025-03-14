@@ -1,7 +1,10 @@
-*** Settings ***
+***Settings*** 
 Library    SeleniumLibrary
 Resource    ${EXECDIR}/resources/variables/Variables_Kim.robot
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 *** Keywords ***
 
 the browser is open on the correct URL
@@ -180,10 +183,7 @@ the user Proceeds to Checkout, Then the Checkout Summary is Shown
     ${checkout_summary}=    Handle Alert  timeout=10s
     Should Contain   ${checkout_summary}  2 VIP Adult Ticket(s) - $200
     Should Contain   ${checkout_summary}  2 VIP Child Ticket(s) - $120
-    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on 2025-06-28 - $220
-    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on 2025-06-28 - $220
-    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on 2025-06-28 - $220
-    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on 2025-06-28 - $220
+    Should Contain   ${checkout_summary}  T-Rex Rumble eXtreme Thrill Pack on ${EXPECTED_DATE} - $220
     Should Contain   ${checkout_summary}  Total: $1200
     Sleep                                 3s
 
