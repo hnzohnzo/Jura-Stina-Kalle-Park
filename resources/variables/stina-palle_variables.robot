@@ -6,7 +6,7 @@
 ${standard_timeout}    10s
  
 # Setup
-${browser_jura}    headlesschrome
+${browser_jura}    chrome
 ${url_jura}    file:///${EXECDIR}/website/jurap.html
 ${title_jura}     Jura-Stina-Kalle Park
 ${CHROME_OPTIONS}    --user-data-dir=/tmp/chrome-profile-${RANDOM}
