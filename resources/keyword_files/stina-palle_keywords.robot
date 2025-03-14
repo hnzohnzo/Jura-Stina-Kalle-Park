@@ -9,7 +9,6 @@ Open Browser and Register User
     [Tags]    setup
     Open Browser To Page    ${url_jura}    ${browser_jura}    ${title_jura}
     Maximize Browser Window
-    Set Selenium Speed    0.2
     Wait Until Element Is Visible    ${registration_element} 
     Click Element    ${registration_element}
     Type In Wanted Username    ${username_registration_id}    ${username}
@@ -133,8 +132,10 @@ an error message is visible, telling the user they need a VIP ticket
 
 the user goes to buy a ticket without logging in
     [Tags]    stina-palle-fail
+    Sleep    4s
     Wait Until Element Is Visible    ${buy_tickets_element}
     Click Element    ${buy_tickets_element}
+    Sleep    2s
     
 the user tries to add the ticket to their cart
     [Tags]    stina-palle-ticket
